@@ -1,0 +1,143 @@
+/*
+Feuille de style JMicroVision
+*/
+
+body {
+	font-size: 10pt;
+	font-family: Verdana,Arial,Tahoma,Helvetica,sans-serif;
+	background-color: #eef2f8;
+	margin: 0px;
+}
+a{color:#DA7C00;text-decoration:none}
+a.ns{text-decoration:none}
+a.nsb{color:#FFFFFF}
+a.nsn{color:#000000}
+a:hover{background:#DF8D3A;color:#FFFFFF}
+a.pix:hover{background:#FFFFFF}
+b,strong{font-weight:bold}
+h1{font-size:20pt;font-weight:bold}
+h2{font-size:16pt;font-weight:bold}
+h3{font-size:13pt;font-weight:bold}
+h4{font-size:11pt;font-weight:bold}
+td,p,blockquote,span{color:#000000;font:10pt Verdana,Tahoma,Arial,Helvetica,sans-serif}
+p.note {margin-top: 5pt;
+	margin-left: 22pt}
+.firstletter:first-letter{font:bold 13pt Verdana,Arial,Tahoma,Helvetica,sans-serif}
+.intertitre{
+	border-bottom:1pt solid #6C8A9D;
+	border-top:1pt solid #6C8A9D;
+	font-size: 13pt;
+	font-family: Verdana,Arial,Tahoma,Helvetica,sans-serif;
+	margin-bottom:3pt;
+	padding-bottom:2pt;
+	padding-top:2pt;
+}
+.justify{color:#000000;font:10pt Verdana,Arial,Tahoma,Helvetica,sans-serif;text-align:justify}
+.list0{list-style-type:none}
+.now{
+	background:#F0F2F4;
+	color:#6C8A9D;
+	padding:2pt 5pt;
+	margin-top: 25px;
+	margin-bottom: -10px;
+	border: 1pt outset;
+	font-weight: bold;
+}
+
+.fondAbout {
+background:#FFFFFF url(images/About.jpg) no-repeat scroll right bottom
+}
+.title {
+	font-size: 16px;
+	font-family: Verdana,Arial,Tahoma,Helvetica,sans-serif;
+	font-weight: bold;
+	font-variant: small-caps;
+	margin-top: 25px;
+	margin-bottom: -12px;
+}
+
+.foot {
+	font-size: x-small;
+	font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
+	font-weight: normal;
+}
+
+.headerTable {
+	color: #2D3942;
+	font-weight: bold;
+}
+.navig {
+	font-size: 12px;
+	font-family: Geneva, Helvetica, Arial,sans-serif;
+	layer-background-color: #000000;
+	border: none;
+	padding: 3px;
+	margin: 0px;
+	color: #999999;
+	background-color: #000000;
+	font-weight: bold;
+}
+.navig p {
+	padding: 0px;
+	margin: 0px;
+}
+.navig a:link {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.navig a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.navig a:hover {
+	color: #DA7C00;
+	font-weight: bold;
+	background-color: #000000;
+}
+.navig a:active {
+	color: #DA7C00;
+	font-weight: bold;
+	background-color: #000000;
+}
+.trail {
+	font-size: 10px;
+	font-weight: normal;
+	font-variant: normal;
+	color: #2D3942;
+	padding: 3px;
+	background-color: #D9E0E6;
+	border: 1px solid #2D3942;
+}
+.squareList{
+	list-style-type: square;
+	list-style-position: outside;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.numberTable td {
+	font-size: 7pt;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.squareList2 {
+	list-style-type: square;
+	list-style-position: outside;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-left: -20px;
+}
+.gray {
+
+	font-size: 12px;
+	font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
+	font-weight: normal;
+	font-variant: normal;
+	color: #666666;
+	padding: 10px 0px 25px;
+}
+.trailMargin {
+	margin-top: 9px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
