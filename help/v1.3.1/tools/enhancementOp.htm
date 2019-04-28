@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+
+<html>
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+  <!-- InstanceBeginEditable name="doctitle" -->
+
+  <title>Enhancement</title><!-- InstanceEndEditable -->
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <!-- InstanceBeginEditable name="head" -->
+  <!-- InstanceEndEditable -->
+  <link href="../contenu.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8"></script>
+
+ <meta name="generator" content="Adobe RoboHelp 2017" />
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Image Operations\nEnhancement");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../JMicroVision.htm", "", ">", "Accueil", "../introduction/welcome.htm");
+document.write("<a href=\"segmentationOp.htm\">Image Operations<\/a> > Enhancement<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../JMicroVision.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="../ehlpdhtm.js"></script>
+
+  <table width="99%" border="0" cellpadding="5" cellspacing="0">
+    <tr>
+      <td align="left" valign="middle" bgcolor="#E4A54E">
+        <h1><!-- InstanceBeginEditable name="titre" -->
+         Enhancement<!-- InstanceEndEditable --></h1>
+      </td>
+
+      <td align="right" valign="middle" bgcolor="#E4A54E"><img src="../images/logForWeb.gif" width="71" height="27" alt=""></td>
+    </tr>
+  </table>
+  <!-- InstanceBeginEditable name="texte" -->
+  Image enhancement  adjusts pixel values to improve the perception of information in images for the human visual system. Enhancement techniques
+are not very useful as pre-processing operations for segmentation,  except background 
+
+
+subtraction
+
+ (that is not directly an enhancement 
+
+
+technique, but more a correction operation), which attempts to <SPAN id=BABID_Results><SPAN>make uniform</SPAN></SPAN> the illumination of the background to <SPAN class=BAB_CPTermStyle>facilitate</SPAN>&nbsp;objects segmentation.
+  <p>&nbsp;</p>
+  <h3>Manual Enhancement</h3>
+  <p><strong>Contrast</strong>: When increasing contrast,  pixels that are darker than 127 (pixel's value) are made darker and pixels that are lighter than 127 are made lighter. This works fine when the values in the histogram is distributed around the middle; otherwise, contrast will not have the desired effect.</p>
+  <p><strong>Luminosity</strong>: Increasing or decreasing the luminosity shifts the histogram. </p>
+  <p><strong>Gamma</strong>: Moving the slider to the right (greater than one) will increase the
+number of dark values and darken the image; moving to the left (less
+than one) will increase the number of light values, lightening the
+image.
+The mapping function is an exponential curve.</p>
+  <h3>Automatic Levels<a name="auto"></a></h3>
+
+  <p>Automatic levels (histogram normalization) stretch an image's pixel values to cover the entire pixel value range (0-255).</p>
+
+  <h3>Equalized Levels</h3>
+
+  <p>This operation attempts to flatten the image histogram. Histogram
+equalization employs a  non-linear mapping which re-assigns
+the intensity values of pixels in the input image so that the output
+image contains a uniform distribution of intensities. </p>
+  <h3>Background Subtraction</h3>
+
+  <p>This operation attempts to make uniform the background illumination when, for instance, an image has been acquired by  a microscope with a nonuniform illumination. There are two ways to correct this issue:</p>
+  <ol>
+    <li> Take a picture of the scene without specimen (only the background). Then, take another picture with the specimen.<br>
+      Select the image with the specimen in <strong>Source 1</strong> and the one without the specimen in <strong>Source 2</strong>.<br>
+      Finally, adjust the <strong>Luminosity offset</strong> slider to correct the luminosity of the resulting image. </li>
+    <li>When you do not have a picture with only the background, press the<strong> Create Artificial Background</strong> button.<br>
+      Set at least 6 points that match to the background of the image (using the <strong>Add Point</strong> button or Ctrl +W). The values of these points are used by a polynomial fit function to create an artificial background. <br>
+      Finally, press <strong>Add image </strong>in the Artificial Background dialog. Close the dialog and then follow the instructions at the point 1.</li>
+  </ol>
+  <p><img height="13" src="../images/hg_see.gif" width="18" alt=""><b>See also:</b></p>
+  <dl>
+    <dd><a href="image_factory.htm">Image Factory</a></dd>
+    <dt><a href="image_factory.htm"></a></dt>
+  </dl>
+<!-- InstanceEndEditable --><!-- InstanceEnd -->
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

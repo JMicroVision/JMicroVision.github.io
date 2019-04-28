@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+
+<html>
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+  <!-- InstanceBeginEditable name="doctitle" -->
+
+  <title>Binary</title><!-- InstanceEndEditable -->
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <!-- InstanceBeginEditable name="head" -->
+  <!-- InstanceEndEditable -->
+  <link href="../contenu.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8"></script>
+
+ <meta name="generator" content="Adobe RoboHelp 2017" />
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Image Operations\nBinary");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../JMicroVision.htm", "", ">", "Accueil", "../introduction/welcome.htm");
+document.write("<a href=\"segmentationOp.htm\">Image Operations<\/a> > Binary<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../JMicroVision.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="../ehlpdhtm.js"></script>
+
+  <table width="99%" border="0" cellpadding="5" cellspacing="0">
+    <tr>
+      <td align="left" valign="middle" bgcolor="#E4A54E">
+        <h1><!-- InstanceBeginEditable name="titre" -->
+         Binary<!-- InstanceEndEditable --></h1>
+      </td>
+
+      <td align="right" valign="middle" bgcolor="#E4A54E"><img src="../images/logForWeb.gif" width="71" height="27" alt=""></td>
+    </tr>
+  </table><!-- InstanceBeginEditable name="texte" -->
+
+  <p>Binary operations can  be performed exclusively on binary images. In binary images, white regions represent the foreground (pixels in 8 pixel connectivity) and  black regions  the background (pixels in 4 pixel connectivity).</p>
+  <p><strong>Pixel connectivity:</strong></p>
+  <p>Connectivity defines which pixels are connected to other pixels to form a region (e.g. object, hole). </p>
+  <table width="99%"  border="0" cellpadding="5">
+    <tr>
+      <td align="left" valign="top"><img src="../images/connectivity4.gif" width="55" height="55"></td>
+      <td align="left" valign="top">4-connected: only along the horizontal and the vertical direction.</td>
+      <td width="25" align="left" valign="top"><p>&nbsp;</p></td>
+      <td align="left" valign="top"><img src="../images/connectivity8.gif" width="55" height="55"></td>
+      <td align="left" valign="top">8-connected: in all directions (including diagonal direction).
+      </td>
+    </tr>
+  </table>
+  <p>&nbsp;  </p>
+  <h3>Hole Fill</h3>
+  <p>Fill the holes of objects (white regions). The background and the holes are 
+
+
+characterized
+
+ by black pixels in 4 pixel connectivity. Holes are defined as black regions, which are not connected to an image border.</p>
+  <h3>Border Kill</h3>
+  <p>Remove all the objects (white regions) that are connected to an image border. </p>
+  <h3>Euclidian Distance Map</h3>
+  <p>Each white pixel  is converted to a gray value that represents the distance from the nearest black pixel. Therefore, the resulting image is a grayscale image.</p>
+  <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note:</strong> When the white regions are small, the resulting image seems to be 
+
+
+completely
+
+ black. Use the <a href="enhancementOp.htm#auto"><strong>Automatic levels</strong></a> operation to stretch the gray levels distribution. </p>
+  <h3>Reconstruction</h3>
+  <p>Binary reconstruction allows selecting some white regions using a second binary image. The second image (<strong>source 2</strong>) contains markers (white regions). The reconstruction  selects all the white regions in the <strong>source 1</strong> image that are connected at least to one marker or a part of it (to create binary image of markers, see <a href="image_factory.htm#marker"><strong>Markers</strong></a>).</p>
+  <h3>Gray Levels 
+
+
+  <strong> Conversion</strong> </h3>
+  <p>Converts a binary image to a grayscale image (see <a href="channel.htm">Image Types</a>).</p>
+  <h3>Color 
+
+
+  <strong> Conversion</strong> </h3>
+  <p>Converts a binary image to a color image (RGB) (see <a href="channel.htm">Image Types</a>).</p>
+  <p>&#160;</p>
+
+  <p><img height="13" src="../images/hg_see.gif" width="18" alt=""><b>See also:</b></p>
+
+  <dl>
+    <dd><a href="image_factory.htm">Image Factory</a></dd>
+  </dl>
+
+  <p>&#160;</p><!-- InstanceEndEditable --><!-- InstanceEnd -->
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

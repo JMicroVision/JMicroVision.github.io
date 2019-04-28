@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+
+<html>
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+  <!-- InstanceBeginEditable name="doctitle" -->
+
+  <title>Texture</title><!-- InstanceEndEditable -->
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+  <link href="../contenu.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8"></script>
+
+ <meta name="generator" content="Adobe RoboHelp 2017" />
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("User Interface\nProject Windows\nTexture");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../JMicroVision.htm", "", ">", "Accueil", "../introduction/welcome.htm");
+document.write("<a href=\"main_file_menu.htm\">User Interface<\/a> > <a href=\"project_window.htm\">Project Windows<\/a> > Texture<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../JMicroVision.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="../ehlpdhtm.js"></script>
+
+  <table width="99%" border="0" cellpadding="5" cellspacing="0">
+    <tr>
+      <td align="left" valign="middle" bgcolor="#E4A54E">
+        <h1><!-- InstanceBeginEditable name="titre" -->
+         Texture<!-- InstanceEndEditable --></h1>
+      </td>
+
+      <td align="right" valign="middle" bgcolor="#E4A54E"><img src="../images/logForWeb.gif" width="71" height="27" alt=""></td>
+    </tr>
+  </table><!-- InstanceBeginEditable name="texte" -->
+
+  <p><strong>Min</strong>,<strong> Max</strong>,<strong> Mean</strong>, <strong>Median, Standard deviation</strong>, <strong>Skewness</strong>, <strong>Kurtosis</strong>, and <strong>Entropy</strong> are statistical properties of the pixel intensity values. Here, the statistical properties of a channel are computed for each object. The  texture parameters are additional <a href="../tools/object_descriptors.htm">object descriptors</a>.</p>
+
+  <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note:</strong> To compute the texture parameters: In the <strong>Project</strong> menu, click on <strong>Preferences</strong>. In the <strong><a href="project_props.htm">Project Preferences</a></strong> window, select <strong>Object Extraction</strong>, click on the button <strong>Compute Additional Parameters</strong> and select <strong>Texture</strong>.</p>
+  <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note: </strong>This process can be stopped by clicking on its progress bar, after closing the dialog.&#160;</p>
+  <p><img src="../images/texture.gif" width="273" height="190" alt=""></p>
+
+  <p><strong>Channel</strong>: Select the <strong>RGB</strong> or <strong>IHS</strong> channels for a color image and <strong>Gray Levels</strong> for a grayscale image (see <a href="../tools/channel.htm">Image Types</a>).</p>
+
+  <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note:</strong> To display the texture parameters in the Data Viewer or in the <a href="../tools/object_extraction.htm">Object Extraction</a> tool (Objects tab): In the <strong><a href="project_props.htm">Project Preferences</a></strong> window, select <strong>Object Extraction</strong> and check <strong>Texture (Additional)</strong>. The texture parameters are not saved in the <a href="../getting_started/file_format.htm#jvm">JMicroVision Project file</a>.</p>
+
+  <p>&#160;</p><!-- InstanceEndEditable --><!-- InstanceEnd -->
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

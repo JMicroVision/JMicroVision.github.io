@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+
+<html>
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+  <!-- InstanceBeginEditable name="doctitle" -->
+
+  <title>Image Rectification</title><!-- InstanceEndEditable -->
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <!-- InstanceBeginEditable name="head" -->
+  <!-- InstanceEndEditable -->
+  <link href="../contenu.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8"></script>
+
+ <meta name="generator" content="Adobe RoboHelp 2017" />
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("User Interface\nProject Windows\nImage Rectification");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../JMicroVision.htm", "", ">", "Accueil", "../introduction/welcome.htm");
+document.write("<a href=\"main_file_menu.htm\">User Interface<\/a> > <a href=\"project_window.htm\">Project Windows<\/a> > Image Rectification<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../JMicroVision.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="../ehlpdhtm.js"></script>
+
+  <table width="99%" border="0" cellpadding="5" cellspacing="0">
+    <tr>
+      <td align="left" valign="middle" bgcolor="#E4A54E">
+        <h1><!-- InstanceBeginEditable name="titre" -->
+         Image Rectification <!-- InstanceEndEditable --></h1>
+      </td>
+
+      <td align="right" valign="middle" bgcolor="#E4A54E"><img src="../images/logForWeb.gif" width="71" height="27" alt=""></td>
+    </tr>
+  </table><!-- InstanceBeginEditable name="texte" -->
+
+  <p>The image rectification module using control points for geometric corrections helps to match two images that represent the same scene but have a different size, orientation or deformation. In order to rectify the second image, it is necessary to set corresponding points on both images. Each pair of points must match as well as possible  the same place on both images.</p>
+  <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note:</strong> To open this dialog: In the <strong><a href="project_file_menu.htm">File Menu</a></strong> of the project window, select <strong>Import Image - Different Coordinates</strong>.</p>
+  <p><img src="../images/rectification.gif" width="368" height="224" alt=""></p>
+  <p><strong>File path</strong>: Press the browse button on the right and choose an image to rectify.</p>
+  <p><strong>Add Point</strong>: Click on this button (or Ctrl +W), then move the cross cursor on the reference image (at the top) and  click on the desired point. A corresponding point  is automatically set according to the image size on the image to rectify (at the bottom). </p>
+  <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt=""><strong>Note</strong>: When selecting a row of the table that corresponds to a pair of points located on both images, the two points are selected and displayed in the center of the main window.</p>
+  <p>A point can be deleted by pressing the delete key when a point or a row in the table is selected. </p>
+  <p><strong>Degree</strong>: It is possible to make affine, quadratic, quartic or quintic transformations (most of the time the affine transformation is the more suitable) and to have an error associated to each point, when there are more points than the minimum required by the transformation type. The error on x and y axis (distance from a point to the predicted point according to the equation of the transformation) can give a clue as to which points should be moved in order to reduce the error.</p>
+  <p>When there are enough points to compute the rectification, press <strong>Process Rectification</strong> to add the rectified image to the project.</p>
+  <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt=""><strong>Note</strong>: The rectified image added in the project is 
+
+
+overwritten
+
+ when the button <strong>Process Rectification</strong> is pressed several times. To get more than one rectified image in the same project, just close the rectification module and reopen it to rectify an image. </p>
+  <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt=""><strong>Note</strong>: The project windows cannot be closed as long as the image rectification window is open. </p>
+
+  <p class="note">&#160;</p><!-- InstanceEndEditable --><!-- InstanceEnd -->
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

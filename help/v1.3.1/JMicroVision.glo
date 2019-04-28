@@ -1,0 +1,152 @@
+﻿NAME=Algorithm
+A set of well-defined rules or procedures for solving a problem or providing an output  from a specific set of inputs.
+NAME=Background
+The part of a scene behind the object to be imaged. In JMicroVision, this is an alternative to the Object Extraction tool. It is more suitable to use background for highly connected objects (e.g. matrix, ciment). The background descriptors are applied to the whole background, not to individual regions.
+NAME=Bicubic Interpolation
+see Interpolation.
+NAME=Bilinear Interpolation
+see Interpolation.
+NAME=Binary Image
+A black and white image represented as a single bit containing either zeros or ones, in which objects appear as silhouettes. The result of thresholding.
+NAME=Bit
+An acronym for a BInary digiT. It is the smallest unit of information which can be represented. A bit may be in one of two states, on or off, represented by a zero or a one.
+NAME=Blob
+A single, connected region in a binary or grayscale image.
+NAME=BMP (Bitmap)
+The standard Windows image format on DOS and Windows compatible computers. The BMP format supports RGB (red, green, blue), indexed-colors, grayscale, and Bitmap color modes. BMP files have the .bmp extension. Lossless compression can be specified, but some programs use only uncompressed files.
+NAME=Bounding Box
+The four coordinates which define a box around the object parallel to the major  and minor axis.
+NAME=Brightness
+The total amount of light or incident illumination on a scene or object per unit area. Also called intensity.
+NAME=Byte
+Eight bits of digital information. A byte has values from 0 to 255, and is the unit most common to represent the gray scale value of one pixel.
+NAME=Calibration
+The act of relating X and Y pixel spacing to known or predetermined pixels per unit length (i.e. inch, mm) factor. Often involves adjusting the image position in setup.
+NAME=CIE
+An acronym for a chromaticity coordinate system developed by the "Commission Internationale de l'Eclairage", the international commission on illumination. In the CIE system, a plot of ratios (x, y and z) of the three standard primary colors (tristimulus values) to their sum. The most common diagram is the 2 dimensional CIE (x,y).
+NAME=Classification
+An assignment of image objects to one of two or more possible groups. Decisions are made by evaluating features either 1) structurally, on the basis of relationships or, 2) statistically. For example, 1) a penny is round, has a certain diameter (+/- a tolerance) and has a histogram of a mean value, or 2) statistically, the object is measured a number of times, then the average and the standard deviation are recorded. After training, the features are weighted based on significance in object identification. For multiple features, absolute values are used.
+NAME=Color
+A visual object attribute which may be described by a "coordinate system" such as hue, saturation and intensity (HSI), CIE or LAB. Wavelengths in the visible part of the electromagnetic spectrum to which retinal rods respond.
+NAME=Color Space
+A two or three dimensional space used to represent color coordinates. RGB, HSI, LAB and CIE are all representations of color spaces.
+NAME=Contrast
+The difference of light intensity between two adjacent regions in the image of an object. Often expressed as the difference between the lightest and darkest portion of an image. Contrast between a flaw or feature and its background is the goal of illumination.
+NAME=Convex Hull
+The region enclosed by the rubber band is called the convex hull of the object. The rubber band bridges over indentations around the periphery of the feature.
+NAME=Convex Perimeter
+The convex perimeter is the length of the convex hull or bounding polygon, and bridges over indentations around the periphery of the feature.
+NAME=Convolution
+Superimposing an m x n operator (usually a 3x3 or 5x5 mask) over an area of the image, multiplying the points together, summing the results to replace the original pixel with the new value. This operation is often performed on the entire image to enhance edges, features, remove noise and other filtering operations.
+NAME=Digital Camera
+The newest generation of video cameras transforms visual information into pixels and translates each pixel's level of light into a number in the camera.
+NAME=Digital Image
+A video image converted into pixels. The numeric value of each pixel's value can  be stored in a computer memory for subsequent processing and analysis.
+NAME=Fast Fourier Transform
+This transofrm produces a new image which represents the frequency domain content of the spatial or time domain image information. Data is represented as a series of  sinusoidal waves.
+NAME=Feature Vectors
+A set of features of an object (such as area, number of holes, etc) that can be used for its identification or inspection.
+NAME=Features
+Simple image data attributes such as pixel amplitudes, edge point locations and  textural descriptors, center of mass, number of holes in an object with distinctive characteristics  defined by boundaries or regions.
+NAME=Filter
+A device or process that selectively transmits frequencies. In optics, the material either reflects or absorbs certain wavelengths of light, while passing others. Filters can be used to sharpen or smooth image details, or to extract edges from objects.
+NAME=Fluorescence
+The emission of light or other electromagnetic radiation at longer wavelengths by matter as a result of absorption of a shorter wavelength. The emission lasts only as long as the stimulating irradiation is present.
+NAME=Gamma
+The numeric value for the degree of contrast in a video signal. The exponent in the power law relating output to input signal magnitude. Non-linear camera tube.
+NAME=GIF (Graphic Interchange Format)
+Image format that supports only 255 colors, so requires lossy quantization for full-color photos. GIF files are best used with large areas of solid colors, such as logos, and simple illustrations with flat colors. GIF files are cross-platform and will work on all computer types. Uses lossless, patented LZW compression. This patent expired in the United States in 2003, but is still effective in Europe, Japan and Canada.
+NAME=Gray Level
+A quantized measurement of image irradiance (brightness), or other pixel property typically in the range between pure white and black.
+NAME=Gray Scale
+Variations of values from white, through shades of gray, to black in a digitized image with black assigned the value of zero and white the value of one.
+NAME=Grayscale Image
+An image consisting of an array of pixels which can have more than two values. Typically, up to 256 levels (8 bits) are used for each pixel.
+NAME=Histogram
+A graphical representation of the frequency of occurrence of each intensity or range of intensities (gray levels) of pixels in an image. The height represents the number of observations occurring in each interval.
+NAME=Histogram Analysis
+Determination of the presence or absence of a feature or flaw based on the histogram values in a certain gray scale region.
+NAME=Histogram Equalization
+Modification of the histogram to evenly distribute a narrow range of  image gray scale values across the entire available range.
+NAME=HLS (Hue-Lightness-Saturation)
+see HSI
+NAME=Hough Transform
+A global parallel method for locating both curved and straight lines. All points on the curve map into a single location in the transform space.
+NAME=HSI (Hue-Saturation-Intensity)
+In this color representation system, hue is the color as described by wavelength, for instance the distinction between red and yellow. Saturation is the amount of the color that is present, for instance the distinction between red and pink. The third axis (called lightness, intensity or value) is the amount of light, the distinction between a dark red and light red or between dark grey and light grey. A mathematical conversion from RGB: H = [PI/2 – arc tan (2*R – G – B) /  1.732*(G – B) + PI; G< B] / 2*PI; I = (R + G + B) / 3; S = 1 – [min(R,G,B) / I]
+NAME=HSI Conversion
+A mathematical conversion from the RGB color space to hue, saturation and intensity values.
+NAME=HSV (Hue-Saturation-Value)
+See HSI.
+NAME=Hue
+One of the three properties of HSI color perception. A color attribute used to express the  amount of red, green, blue or yellow a certain color possesses. White, gray and black do not  exhibit any hue. See HSI.
+NAME=IHS (Intensity-Hue-Saturation)
+see HSI
+NAME=Image Analysis
+Evaluation of an image based on its features.
+NAME=Image Enhancement
+Image processing operations which improve the visibility of image details and features.
+NAME=Image Processing
+Digital manipulation of an image to aid feature visibility, make measurements or alter image contents.
+NAME=Image Resolution
+The number of rows and columns of pixels in an image.
+NAME=Intensity
+See HSI.
+NAME=Interlaced Scanning
+A scanning process in which all odd lines then all even lines are alternately scanned. Adjacent lines belong to different fields.
+NAME=Interpolation
+A mathematical method of regenerating missing or needed information, such as nearest neighbor,  bilinear and bicubic interpolation. The bicubic fit is more isotropic than the bilinear method. Interpolation always has the effect of smoothing the image and removing some high frequency information.
+NAME=Java Virtual Machine
+A Software that serves as interpreter between Java bytecode and a specific operating system (allows Java applications to run on any platform without changing the code).
+NAME=JPEG (Joint Picture Experts Group)
+An image compression standard, lossy compression, uses the discrete cosine transform. The quality can vary greatly depending on the compression settings. JPEG can have millions of colors and are often used for photographs and very complex images. JPEG files are cross-platform and will work on all computer types. JPEG images have the .jpg, .jpe, or. jpeg extension.
+NAME=Look-Up Table (LUT)
+Software definition:  palette of color or pseudo-color values (usually 256 per channel). Hardware definition: High speed digital memory used to transform image input values to outputs for thresholding, windowing and other mappings such as pseudo-color.
+NAME=Luminance
+The black-and-white part of a video signal. Also called Luma.
+NAME=Median Filter
+A method of image smoothing (convolution) which replaces each pixel value with the median grayscale value of its immediate neighbors.
+NAME=Micron
+One millionth of a meter, also called a micrometer.
+NAME=Nearest Neighbor Interpolation
+see Interpolation.
+NAME=Object Descriptors
+see Object Features
+NAME=Object Features
+Any characteristic that is descriptive of an image or region, and useful for distinguishing one from another. A feature may be any measurable item such as length, size, number of holes, surface texture amount or center of mass.
+NAME=Pattern Recognition
+A process which identifies an object based on analysis of its features.
+NAME=Pixel
+An acronym for "picture element." The smallest distinguishable and resolvable area in an image. The discrete location of an individual photo-sensor in a solid state camera.
+NAME=Platform
+A platform is a version of interface software meant for a specific computer. Examples of such software are DOS, Windows, Windows95, AS400, Solaris, Linux, and Macintosh platforms. there are many more.
+NAME=PNG (Portable Network Graphics)
+PNG image format was developed as an alternative to GIF. PNG files support 24-bit images and produce background transparency without jagged edges. Some older versions of Web browsers may not support PNG images. Like GIF and JPEG files, PNG files are cross-platform and compressed.
+NAME=Polarized Light
+Light which has had the vibrations of the electric or magnetic field vector typically restricted to a single direction, in a plane perpendicular to its direction of travel. It is reated by a type of filter which absorbs one of the two perpendicular light rays. Crossing polarizers theoretically blocks all light transmission.
+NAME=RAM (Random Access Memory)
+Computer memory that allows data to be read or written at a particular location without having to pass sequentially through preceding locations.
+NAME=Raster
+A series of scan lines that make up a television or computer display. All of the scan lines that make up a frame of video form a raster. Most images are stored in a raster format, as a series of lines.
+NAME=Region
+Area of an image. Also called a region of interest.
+NAME=Resolution
+A basic measurement of how much information is on the screen. Higher resolution means much more details in the image.
+NAME=RGB (Red, Green, Blue)
+The three primary color system used for video color representation.
+NAME=Saturation
+The amount of color present. One of the three properties of color perception along with hue and intensity. See HSI.
+NAME=Scaling
+A method of altering the size of an image in the x and/or y dimensions, which changes the effective resolution of the image.
+NAME=Segmentation
+The process of dividing a scene into a number of individual objects or contiguous regions, differentiating them from each other and from the image background.
+NAME=Thresholding
+The process of converting gray scale image into a binary image. If the pixel's value is above the threshold, it is converted to white. If below the threshold, the pixel value is converted to black.
+NAME=TIFF (Tagged-Image File Format)
+TIFF is a very common image format and is used to exchange files between applications and computer platforms. TIFF format is supported by virtually all paint programs, image editing and page layout applications. The TIFF format supports CMYK, RGB and grayscale files. TIFF files have the .tif or tiff extension. Lossy and lossless compression available, but many programs only support a subset of available options.
+NAME=Tiling
+Tiling is supported only by Tiff, flashpix et jpeg2000 format. Tiled images are made up of tiles. Each tile can be processed and stored in memory separately. Tiles may be stored in a centrally-maintained cache for performance. Tiling also facilitates the use of multiple threads for computation. Previously allocated tiles may also be re-used to save memory.
+NAME=WBMP (Wireless Application Protocol Bitmap Format)
+The Wireless Bitmap image format is mainly used in the Wireless Application Protocol (WAP).
+NAME=XYZ
+CIE standard color space, used for comparing colors and in psychophysical experiments. XYZ are generally obtained from video cameras via a single linear transformation.

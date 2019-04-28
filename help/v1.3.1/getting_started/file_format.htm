@@ -1,0 +1,247 @@
+<!DOCTYPE HTML>
+<html>
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 2017" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Supported File Types</title>
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<link href="../contenu.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Getting Started\nSupported File Types");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../JMicroVision.htm", "", ">", "Accueil", "../introduction/welcome.htm");
+document.write("<a href=\"getting_help.htm\">Getting Started<\/a> > Supported File Types<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../JMicroVision.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<table cellspacing="0" width="99%">
+	<tr>
+		<td style="vertical-align: middle; text-align: left; padding-left: 5px; 
+			 padding-top: 5px; padding-right: 5px; padding-bottom: 5px;" 
+			 bgcolor="#E4A54E"><h1><!-- InstanceBeginEditable name="titre" -->
+         Supported File Types<!-- InstanceEndEditable --></h1></td>
+		<td style="vertical-align: middle; text-align: right; padding-left: 5px; 
+			 padding-top: 5px; padding-right: 5px; padding-bottom: 5px;" 
+			 bgcolor="#E4A54E"><img src="../images/logForWeb.gif" alt="" 
+									 width="71" height="27" border="0" /></td>
+	</tr>
+</table>
+<!-- InstanceBeginEditable name="texte" -->
+
+  <h2>Supported file formats for loading images</h2>
+<p>The following formats are supported: <strong>BMP</strong>, <strong>GIF</strong>, 
+ <strong>JPEG</strong>, <strong>PNG</strong>, <strong>PNM</strong> and 
+ <strong>TIFF</strong>. Transparency or alpha channel is removed when loading 
+ a format that uses transparency. Images with 16 bits per channel are converted 
+ in 8 bits per channel.</p>
+<h3>BMP (.bmp) </h3>
+<p>The BMP reader can read Version 2.x, 3.x and some 4.x BMP images. BMP 
+ images with 1, 4, 8, 24 bits can be read with this reader. A support for 
+ 16 and 32 bit images has also been implemented, although such images are 
+ not very common.</p>
+<p>Reading of compressed BMPs is supported. BI_RGB, BI_RLE8, BI_RLE4 and 
+ BI_BITFIELDS compressions are handled.</p>
+<p>BMP limitations:</p>
+<ul style="list-style-image: url('../images/blueListBull.gif');">
+	<li>Only the default RGB color space is supported.</li>
+	<li>Alpha channels are not supported.</li>
+</ul>
+<h3>GIF (.gif)</h3>
+<p>GIF files are read using the classes of the Java 2 SDK.</p>
+<h3>JPEG (.jpg, .jpeg, .jpe)</h3>
+<p>JPEG files are read using the classes of the Java 2 SDK.</p>
+<h3>PNG (.png)</h3>
+<p>All PNG files (8 and 24 bit palettes).</p>
+<h3>PNM (.pgm, .pnm, .ppm)</h3>
+<p>Standard PNM files, including PBM, PGM, and PPM images of both ASCII 
+ and raw formats.</p>
+<h3>TIFF (.tif, .tiff) </h3>
+<p>The TIFF decoder supports all of the baseline TIFF 6.0 specifications. 
+ The TIFF decoder also supports several extensions including CCITT bilevel 
+ encodings, Tiled Images, Sample Format (integral and floating point). 
+ TIFF G3, G4, PackBits, LZW, JPEG-in-TIFF and DEFLATE compression types 
+ are understood by the TIFF decoder.</p>
+<h2>File formats for saving images<a name="savingImage"></a> </h2>
+<h3>Tiled TIFF (.tif, .tiff) </h3>
+<p>Tiled TIFF is the best format to visualize or analyze images in JMicroVision. 
+ It also keeps information of the acquisition device. Images can be saved 
+ in the tiled TIFF format: </p>
+<ol>
+	<li>From the file menu <a href="../user_interface/main_file_menu.htm#convertToTile">Convert 
+	 Images to Tiled TIFF</a> </li>
+	<li>When they are loaded, if the image length or the image width is 
+	 larger the 768 pixels and if the format is not already tiled TIFF, 
+	 a popup dialog asks you to optimize the image.</li>
+	<li>Press the save button in the <a href="../user_interface/image_list.htm">Image 
+	 List Editor</a>.</li>
+</ol>
+<p class="note"><img src="../images/pencil.gif" alt="" width="15" height="19" 
+					 border="0" />&#160;<strong>Note:</strong> The tiled 
+ TIFF format is very suitable for large images. It also offers a faster 
+ rendering comparing to the other formats. Tiling improves the performance 
+ and facilitates the use of multiple threads for computation. When loading 
+ an image, JMicroVision asks to convert the image to a tiled TIFF format, 
+ which is a format with a tiled data structure. As a result, each tile 
+ can be loaded separately in memory (without a tiled format, the whole 
+ image would be loaded).</p>
+<h3>TIFF (.tif, .tiff) </h3>
+<p>Standard TIFF format (not tiled) for saving images produced by <a href="../tools/image_factory.htm">Image 
+ Factory</a> or for <a href="../user_interface/project_file_menu.htm#export">exporting 
+ a snapshot of the project rendering</a>. </p>
+<h3>PNG (.png)</h3>
+<p>Image format for saving charts, histograms and the images produced by 
+ <a href="../tools/image_factory.htm">Image Factory</a> or for <a href="../user_interface/project_file_menu.htm#export">exporting 
+ a snapshot of the project rendering</a>. </p>
+<h2>File format for loading and saving projects </h2>
+<h3>JMicroVision Project (.jmv)<a name="jvm"></a></h3>
+<p>Format of JMicroVision Project files, that includes all the drawings, 
+ general descriptions, calibration, image references, image operations 
+ and preferences.</p>
+<p class="note"><img src="../images/pencil.gif" alt="" width="15" height="19" 
+					 border="0" />&#160;<strong>Note:</strong> The additional 
+ descriptors cannot be included (<a href="../user_interface/context_dialog.htm">Context</a>, 
+ <a href="../user_interface/feret_dialog.htm">Feret</a>,<a href="../user_interface/texture_dialog.htm"> 
+ Texture </a>and <a href="../tools/background_descriptors.htm">Background</a>).</p>
+<h2>Vector graphics format for exporting the current project <a name="svg" 
+	 id="svg"></a> </h2>
+<h3>Compressed SVG (.svgz) </h3>
+<p>The SVG (Scalable Vector Graphics) file format is defined in the W3C 
+ specification, SVGZ is the &quot;gzip&quot; compression (an open-source 
+ variant of Zip compression) of the SVG file. If the displayed image is 
+ exported, a directory called &quot;images_ &quot; + &quot;the name of 
+ the project&quot; is created and the image will be copied in it. </p>
+<p>Most of the major vector graphics editors can read SVG (Adobe Illustrator, 
+ Corel Draw, ArcGIS 9.2, GIMP, OpenOffice...). </p>
+<h2>File format for loading and saving a list of classes </h2>
+<h3>Component list (.pcl) </h3>
+<p>The Component list file allows loading and saving your own list of components 
+ for <a href="../tools/point_counting.htm">Point Counting</a>, <a href="../tools/object_extraction.htm">Object 
+ Extraction</a> or markers in <a href="../tools/image_factory.htm">Image 
+ Factory</a>. </p>
+<h2>File format for loading and saving a description card </h2>
+<h3>General Description list (.gdl)</h3>
+<p>The <a href="../tools/general_description.htm">General Description</a> 
+ list file allows loading and saving your own list of descriptions.</p>
+<h2>File format for loading and saving a list of learning elements</h2>
+<h3>Learning list (.lng) </h3>
+<p>The Learning list file allows saving learning elements, so that they 
+ can later be applied or added to another <a href="../user_interface/supervised_classif.htm">supervised 
+ classification</a>.</p>
+<h2>File format for loading and saving a calibration </h2>
+<h3>Calibration ratio (.cal)</h3>
+<p>The <a href="../tools/background.htm">Calibration</a> ratio file allows 
+ loading and saving a specific calibration ratio that corresponds to one 
+ image or to a set of images.</p>
+<h2>File format for saving data tables<a name="data"></a></h2>
+<h3>CSV semicolon separator (.csv)</h3>
+<p>CSV is a standard format that can be read by software that uses a spreadsheet. 
+ Actually, it is a text file where each element of the table is separated 
+ by a semicolon and a line by a carriage return. </p>
+<h3>ASCII tabulation separator (.txt)</h3>
+<p>It is a simple text file where each element of the table is separated 
+ by tabulation marks and a line by a carriage return.</p>
+<h3>XML version 1.0 (.xml)</h3>
+<p>XML file defined by XML 1.0 specifications. </p>
+<p>&#160;</p>
+<p><!-- InstanceEndEditable --><!-- InstanceEnd -->
+</p>
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

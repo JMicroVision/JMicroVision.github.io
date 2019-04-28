@@ -1,0 +1,304 @@
+﻿<html>
+<!-- Sitemap 1.0 -->
+<object type="text/site properties">
+  <param name="FrameName" value="bsscright">
+  <param name="SiteType" value="toc">
+  <param name="Image Width" value="16">
+</object>
+<ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Introduction">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Welcome to JMicroVision">
+      <param name="Local" value="introduction/welcome.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="End-user License Agreement">
+      <param name="Local" value="introduction/licence.htm">
+    </object>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Getting Started">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Getting Help">
+      <param name="Local" value="getting_started/getting_help.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Supported File Types">
+      <param name="Local" value="getting_started/file_format.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Keyboard shortcuts">
+      <param name="Local" value="getting_started/keys.htm">
+    </object>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="User Interface">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Main Menu">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="File Menu">
+        <param name="Local" value="user_interface/main_file_menu.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Options Menu">
+        <param name="Local" value="user_interface/main_options_menu.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Windows Menu">
+        <param name="Local" value="user_interface/main_windows_menu.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Help Menu">
+        <param name="Local" value="user_interface/main_help_menu.htm">
+      </object>
+      </ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Main Window">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Main window">
+        <param name="Local" value="user_interface/main_window.htm">
+      </object>
+      </ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Project Menu">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="File Menu">
+        <param name="Local" value="user_interface/project_file_menu.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Project Menu">
+        <param name="Local" value="user_interface/project_menu.htm">
+      </object>
+      </ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Project Windows">
+    </object>
+    <ul>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Project Window">
+        <param name="Local" value="user_interface/project_window.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Project Toolbar">
+        <param name="Local" value="user_interface/project_toolbar.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Image List Editor">
+        <param name="Local" value="user_interface/image_list.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Display">
+        <param name="Local" value="tools/display.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Lens">
+        <param name="Local" value="tools/lens.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Multiview">
+        <param name="Local" value="tools/multiview.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Image Rectification">
+        <param name="Local" value="user_interface/rectification.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Project Preferences">
+        <param name="Local" value="user_interface/project_props.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Data Viewer">
+        <param name="Local" value="user_interface/data_viewer.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Area Editor">
+        <param name="Local" value="user_interface/area.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Histogram Thresholding">
+        <param name="Local" value="user_interface/threshold.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Image Types">
+        <param name="Local" value="tools/channel.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Coloring Objects">
+        <param name="Local" value="user_interface/color_objects.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Labeling">
+        <param name="Local" value="user_interface/labeling.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Class Editor">
+        <param name="Local" value="user_interface/class_editor.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Feret Diameters">
+        <param name="Local" value="user_interface/feret_dialog.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Context">
+        <param name="Local" value="user_interface/context_dialog.htm">
+      </object>
+      <li><object type="text/sitemap">
+        <param name="Name" value="Texture">
+        <param name="Local" value="user_interface/texture_dialog.htm">
+      </object>
+      </ul>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Tools">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="General Description">
+      <param name="Local" value="tools/general_description.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Note">
+      <param name="Local" value="tools/note.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Calibration">
+      <param name="Local" value="tools/calibration.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="1D Measurement">
+      <param name="Local" value="tools/measure1d.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="2D Measurement">
+      <param name="Local" value="tools/measure2d.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Object Extraction">
+      <param name="Local" value="tools/object_extraction.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Magic Wand">
+      <param name="Local" value="tools/wand.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Classification">
+      <param name="Local" value="user_interface/supervised_classif.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Object Descriptors">
+      <param name="Local" value="tools/object_descriptors.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Point Counting">
+      <param name="Local" value="tools/point_counting.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Background">
+      <param name="Local" value="tools/background.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Background Descriptors">
+      <param name="Local" value="tools/background_descriptors.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Profile">
+      <param name="Local" value="tools/profile.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Image Factory">
+      <param name="Local" value="tools/image_factory.htm">
+    </object>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Image Operations">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Segmentation">
+      <param name="Local" value="tools/segmentationOp.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="K-means clustering">
+      <param name="Local" value="tools/kmeans.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Watershed">
+      <param name="Local" value="tools/watershed.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Arithmetic">
+      <param name="Local" value="tools/arithmeticOp.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Logic">
+      <param name="Local" value="tools/logicOp.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Classic Filtering">
+      <param name="Local" value="tools/classicFilterOp.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Nonlinear Filtering">
+      <param name="Local" value="tools/nonLinearFilterOp.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Gradient Filtering">
+      <param name="Local" value="tools/gradientFilterOp.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Binary">
+      <param name="Local" value="tools/BinaryOp.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Morphology">
+      <param name="Local" value="tools/MorphologyOp.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Pseudo Color">
+      <param name="Local" value="tools/lutOp.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Channel">
+      <param name="Local" value="tools/channelOp.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Enhancement">
+      <param name="Local" value="tools/enhancementOp.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Rasterize Drawings">
+      <param name="Local" value="tools/rasterizeOp.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Plugins">
+      <param name="Local" value="tools/pluginsOp.htm">
+    </object>
+    </ul>
+  <li><object type="text/sitemap">
+    <param name="Name" value="Contact and Support">
+  </object>
+  <ul>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Support and Contacting the Author">
+      <param name="Local" value="contact/contact.htm">
+    </object>
+    <li><object type="text/sitemap">
+      <param name="Name" value="Sending Bug Reports">
+      <param name="Local" value="contact/bugs.htm">
+    </object>
+    </ul>
+</ul>
+</html>

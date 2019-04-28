@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+
+<html>
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+  <!-- InstanceBeginEditable name="doctitle" -->
+
+  <title>Nonlinear Filtering</title><!-- InstanceEndEditable -->
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <!-- InstanceBeginEditable name="head" -->
+  <!-- InstanceEndEditable -->
+  <link href="../contenu.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8"></script>
+
+ <meta name="generator" content="Adobe RoboHelp 2017" />
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Image Operations\nNonlinear Filtering");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../JMicroVision.htm", "", ">", "Accueil", "../introduction/welcome.htm");
+document.write("<a href=\"segmentationOp.htm\">Image Operations<\/a> > Nonlinear Filtering<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../JMicroVision.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="../ehlpdhtm.js"></script>
+
+  <table width="99%" border="0" cellpadding="5" cellspacing="0">
+    <tr>
+      <td align="left" valign="middle" bgcolor="#E4A54E">
+        <h1><!-- InstanceBeginEditable name="titre" -->
+         Nonlinear Filtering<!-- InstanceEndEditable --></h1>
+      </td>
+
+      <td align="right" valign="middle" bgcolor="#E4A54E"><img src="../images/logForWeb.gif" width="71" height="27" alt=""></td>
+    </tr>
+  </table><!-- InstanceBeginEditable name="texte" -->
+
+  <p>Nonlinear  filtering is based on a logical decomposition of a filter into a set of relatively simple operators.</p>
+  <p><strong>Filter size</strong>:<strong> </strong>Define the size of the kernel.</p>
+
+  <p><strong>Filter shape</strong>:</p>
+
+  <ul style="list-style-image:url(../images/blueListBull.gif) ">
+    <li>Square
+      <table border="1">
+        <tr align="center">
+          <td class="tableItem2">x</td>
+          <td class="tableItem2">x</td>
+          <td class="tableItem2">x</td>
+        </tr>
+        <tr align="center">
+          <td class="tableItem2">x</td>
+          <td class="tableItem2">x</td>
+          <td class="tableItem2">x</td>
+        </tr>
+        <tr align="center">
+          <td class="tableItem2">x</td>
+          <td class="tableItem2">x</td>
+          <td class="tableItem2">x</td>
+        </tr>
+      </table>
+    </li>
+
+    <li>Separable square is similar to square except for <strong>Median</strong> filter, where the separable median is
+ defined as the median of the medians of each row. For example, if
+ the pixel values in a 3x3 window are equal to:
+        <table border="0">
+          <tr>
+            <td align="left" valign="top">
+              <table border="1">
+                <tr align="center">
+                  <td class="tableItem2">1</td>
+                  <td class="tableItem2">2</td>
+                  <td class="tableItem2">3</td>
+                </tr>
+                <tr align="center">
+                  <td class="tableItem2">5</td>
+                  <td class="tableItem2">6</td>
+                  <td class="tableItem2">7</td>
+                </tr>
+                <tr align="center">
+                  <td class="tableItem2">4</td>
+                  <td class="tableItem2">8</td>
+                  <td class="tableItem2">9</td>
+                </tr>
+              </table>
+            </td>
+            <td>Then the overall (non-separable) median value is 5, while the separable median is equal to the median of the three row medians: median (1, 2, 3) = 2, median(5, 6, 7) = 6, and median(4, 8, 9) = 8, yielding an overall median of 6.</td>
+          </tr>
+        </table>
+	</li>
+    <li>Plus
+    <table border="1">
+      <tr align="center">
+        <td class="tableItem2"></td>
+        <td class="tableItem2">x</td>
+        <td class="tableItem2"></td>
+      </tr>
+      <tr align="center">
+        <td class="tableItem2">x</td>
+        <td class="tableItem2">x</td>
+        <td class="tableItem2">x</td>
+      </tr>
+      <tr align="center">
+        <td class="tableItem2"></td>
+        <td class="tableItem2">x</td>
+        <td class="tableItem2"></td>
+      </tr>
+    </table>
+    </li>
+
+    <li>X
+      <table border="1">
+        <tr align="center">
+          <td class="tableItem2">x</td>
+          <td class="tableItem2"></td>
+          <td class="tableItem2">x</td>
+        </tr>
+        <tr align="center">
+          <td class="tableItem2"></td>
+          <td class="tableItem2">x</td>
+          <td class="tableItem2"></td>
+        </tr>
+        <tr align="center">
+          <td class="tableItem2">x</td>
+          <td class="tableItem2"></td>
+          <td class="tableItem2">x</td>
+        </tr>
+      </table>
+    </li>
+  </ul>
+
+  <h3>Median</h3>
+
+  <p>A median filter is based upon moving a window over an image (as in a convolution) and computing the output pixel as the median value of the pixel intensities within the input window. The effect is that noise is removed while the position of edges is preserved. The median filter is very efficient for the removal of impulse noise (also known as binary noise).</p>
+  <h3>Min</h3>
+  <p>This filter is similar to the median filter, except that it computes the output pixel as the minimum value.</p>
+  <h3>Max</h3>
+  <p>This filter is similar to the median filter, except that it computes the output pixel as the maximum value.</p>
+  <h3>Kuwahara</h3>
+  <p>The kuwahara filter is an edge preserving blur filter as the median filter. It works by calculating the mean and variance for four subquadrants, and chooses the mean value for the region with the smallest variance.</p>
+  <p>&#160;</p>
+
+  <p><img height="13" src="../images/hg_see.gif" width="18" alt=""><b>See also:</b></p>
+
+  <dl>
+    <dd><a href="image_factory.htm">Image Factory</a></dd>
+  </dl>
+
+  <p>&#160;</p><!-- InstanceEndEditable --><!-- InstanceEnd -->
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

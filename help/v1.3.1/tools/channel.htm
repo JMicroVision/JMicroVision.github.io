@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+
+<html>
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+  <!-- InstanceBeginEditable name="doctitle" -->
+
+  <title>Image Types</title><!-- InstanceEndEditable -->
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+ <!-- InstanceBeginEditable name="head" -->
+ <!-- InstanceEndEditable -->
+  <link href="../contenu.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8"></script>
+
+ <meta name="generator" content="Adobe RoboHelp 2017" />
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("User Interface\nProject Windows\nImage Types");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../JMicroVision.htm", "", ">", "Accueil", "../introduction/welcome.htm");
+document.write("<a href=\"../user_interface/main_file_menu.htm\">User Interface<\/a> > <a href=\"../user_interface/project_window.htm\">Project Windows<\/a> > Image Types<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../JMicroVision.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="../ehlpdhtm.js"></script>
+
+  <table width="99%" border="0" cellpadding="5" cellspacing="0">
+    <tr>
+      <td align="left" valign="middle" bgcolor="#E4A54E">
+        <h1><!-- InstanceBeginEditable name="titre" -->
+         Image Types <!-- InstanceEndEditable --></h1>
+      </td>
+
+      <td align="right" valign="middle" bgcolor="#E4A54E"><img src="../images/logForWeb.gif" width="71" height="27" alt=""></td>
+    </tr>
+  </table>
+  <!-- InstanceBeginEditable name="texte" -->  
+  <p>Most of the digital image channels have 256 intensity levels coded on 8 bits per channel. The color image is produced by combining three channels.
+  The grayscale images have only one channel with 256 gray levels per pixel. The binary images are coded on 1 bit  and therefore have only 2 levels. </p>
+  <h2>Binary image <img src="../images/binary.png" width="16" height="10"></h2>
+<p>A binary image has only one channel (<strong>Binary</strong>). Pixel values in binary images are either black or white. The binary images can be created by one of the <a href="segmentationOp.htm"><strong>segmentation methods</strong></a>. </p>
+<p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note:</strong> The color of the objects (white regions) is referred to as the foreground color. The rest (black) is referred to as the background color.</p>
+<h2>Grayscale image <img src="../images/gray.png" width="16" height="10"></h2>
+<p>A grayscale image has only one channel (<strong>Gray levels</strong>). Pixel values in grayscale images are based upon luminance.</p>
+  <p>The<strong> Real Gray</strong> channel results from the conversion of a color image to a grayscale image (in <a href="lens.htm"><strong>lens</strong></a> options or in <a href="channelOp.htm"><strong>channel</strong></a> operations).
+  The coefficients used to compute luminance are 0.299 (red), 0.587 (green) and 0.114
+  (blue). Pixel = 0.299 * red + 0.587 *green + 0.114
+  *blue.</p>
+  <h2>Color image <img src="../images/color.png" width="16" height="10"><a name="color"></a></h2>
+  <p>In <a href="lens.htm"><strong>lens</strong></a> options or in <a href="channelOp.htm"><strong>channel</strong></a> operations, a color image can be separated into three channels using the <strong>RGB</strong> or <strong>IHS</strong> color space or in one <strong>Real Gray</strong> channel (see above). </p>
+  <h3>RGB</h3>
+  <p>The RGB model is an additive color model and also one of the most common. It has three primary colors: <strong>red</strong>, <strong>green</strong> and <strong>blue</strong>. These three colors are combined in various proportions to produce all the colors displayed on your image. The ICC (International Color Consortium) profile used by JMicroVision is the sRGB.</p>
+
+  <h3>IHS<a name="ihs"></a></h3>
+
+  <p>IHS (or called HSV) is a more intuitive color space than RGB.</p>
+  <ul style="list-style-image:url(../images/blueListBull.gif) ">
+    <li><strong>Intensity</strong> (or luminosity) is the amount of light <SPAN id=BABID_Results><SPAN>independently </SPAN></SPAN>of the color. </li>
+    <li><strong>Hue</strong> describes the visual sensation according to which an area appears to be similar to one of the perceived colors, red, yellow, green and blue, or a combination of two of them.</li>
+    <li><strong>Saturation</strong> is the colorfulness of an area judged in proportion to its brightness. Saturation runs from neutral gray through pastel to saturated colors. A vivid color usually has a high saturation level (not much white).</li>
+  </ul>
+  <p>&nbsp;</p>
+<!-- InstanceEndEditable --><!-- InstanceEnd -->
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

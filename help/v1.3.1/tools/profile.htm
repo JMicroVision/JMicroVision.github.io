@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+
+<html>
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+  <!-- InstanceBeginEditable name="doctitle" -->
+
+  <title>Profile</title><!-- InstanceEndEditable -->
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <!-- InstanceBeginEditable name="head" -->
+  <!-- InstanceEndEditable -->
+  <link href="../contenu.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8"></script>
+
+ <meta name="generator" content="Adobe RoboHelp 2017" />
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Tools\nProfile");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../JMicroVision.htm", "", ">", "Accueil", "../introduction/welcome.htm");
+document.write("<a href=\"general_description.htm\">Tools<\/a> > Profile<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../JMicroVision.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="../ehlpdhtm.js"></script>
+
+  <table width="99%" border="0" cellpadding="5" cellspacing="0">
+    <tr>
+      <td align="left" valign="middle" bgcolor="#E4A54E">
+        <h1><!-- InstanceBeginEditable name="titre" -->
+         Profile <!-- InstanceEndEditable --></h1>
+      </td>
+
+      <td align="right" valign="middle" bgcolor="#E4A54E"><img src="../images/logForWeb.gif" width="71" height="27" alt=""></td>
+    </tr>
+  </table><!-- InstanceBeginEditable name="texte" -->
+
+  <table width="99%" border="0" cellpadding="5">
+    <tr>
+      <td align="left" valign="top">
+        <p><img src="../images/profile.gif" width="230" height="297" alt=""></p>
+      </td>
+
+      <td align="left" valign="top">
+        <p>There are four modes for computing profiles: <strong>Color</strong>, <strong>Grain Size</strong>, <strong>Background</strong> or <strong>Object</strong>. The profiles are created from a rectangular area according to a direction in order to show the variation of the grain size, the variation of the pixel color or the variation of a component previously extracted with the <strong><a href="background.htm">Background</a></strong> or <a href="object_extraction.htm"><strong>Object Extraction</strong></a> tool.</p>
+
+        <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note:</strong> The views produced by <a href="multiview.htm"><strong>Multiview</strong></a> are not visible when using the <strong>Profile</strong> tool.</p>
+      </td>
+    </tr>
+  </table>
+
+  <h3>Add a profile</h3>
+
+  <p><strong>Area</strong>: Select an area representing the desired region of computing (for adding new profile areas, see <a href="../user_interface/area.htm"><strong>Area Editor</strong></a>). The central dotted line of the area indicates the direction of the profile.</p>
+
+  <p><strong>Mode</strong>:</p>
+
+  <ul style="list-style-image:url(../images/blueListBull.gif)">
+    <li><strong>Color</strong>: This profile shows the variation of the <strong>Channel</strong> pixel intensities (see <a href="channel.htm"><strong>Image Types</strong></a>) of the selected <strong>Source Image</strong>.</li>
+
+    <li><strong>Grain Size</strong>: This profile shows the variation of the grain size of the selected <strong>Source Image</strong>. This mode does not require any preprocessing or manipulation. However, some conditions must be satisfied to obtain valid results: the contrast between the grains and the background must be sufficient, their color must be uniform enough and the space between the grains must be constant.<br>
+      At least 50 pixels of width are required to compute the profile. </li>
+
+    <li><strong>Background</strong>: This profile shows the variation in the amount of the selected <strong>Background</strong> (see <strong><a href="background.htm">Background</a></strong>).</li>
+
+    <li><strong>Object</strong>: This profile shows the variation in the amount of the selected <strong>Object</strong> (see <a href="object_extraction.htm"><strong>Object Extraction</strong></a>).</li>
+  </ul>
+
+  <h3>Edit the selected profile</h3>
+
+  <table width="99%" border="0" cellpadding="5">
+    <tr>
+      <td align="right" valign="top">
+        <p><img src="../images/profile2.gif" width="203" height="173" alt=""></p>
+      </td>
+
+      <td align="left" valign="top">
+        <p><strong>Rename</strong>: Edit the profile name.</p>
+
+        <p><strong>Color</strong>: Choose the color profile.</p>
+
+        <p><strong>Normalize Data</strong>: Checking this box normalizes the values between 0 and 1, therefore accentuates the variation.</p>
+
+        <p><strong>Show Bound</strong>: Show the outline of the profile area (dotted line).</p>
+
+        <p><strong>Smooth</strong>: This slider allows to smooth the profile.</p>
+      </td>
+    </tr>
+  </table><strong>Export</strong>: Export in a text file the profile values. In the file, the first line defines the step length from a value to another and the second line is the unit of measure of the step.
+
+  <h2>Profile preferences<a name="pref"></a></h2>
+
+  <p>Select the <strong>line width</strong> of profiles.</p>
+
+  <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note:</strong> To display the preferences, open the <strong><a href="../user_interface/supervised_classif.htm">Project Preferences</a></strong> window <img src="../images/preferences.png" width="16" height="16" alt=""> and select <strong>Profile</strong>.</p>
+
+  <p>&#160;</p><!-- InstanceEndEditable --><!-- InstanceEnd -->
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

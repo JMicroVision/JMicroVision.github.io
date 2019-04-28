@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE polprojfile>
+<ppfml version="2.00" project="JMicroVision">
+ <windowlist>
+  <window name="NewWindow" x="5%" y="5%" width="90%" height="90%" viewtype="doublepane" workspacestyle="DEFAULT" toolbar="off" locationbar="off" menu="off" resizable="yes" statusbar="off" usecurrentwindowsettings="yes" caption="NewWindow" skin="WebHelp_Skin_Files\BlueGrey\BlueGrey.skn">
+   <elements><element name="BrowseSequence" Present="yes" /><element name="SearchInput" Present="no" /><element name="SkinInstruction" value="whskin_ep_ins.ski" />
+   </elements>
+   <agents defaultagent="toc">
+    <agent>toc
+    </agent>
+    <agent>ndx
+    </agent>
+    <agent>nls
+    </agent>
+    <agent>gls
+    </agent>
+   </agents>
+  </window>
+ </windowlist>
+ <contextmap>
+  <contextentry id="16" page="user_interface/data_viewer.htm#area">
+  </contextentry>
+  <contextentry id="35" page="tools\lens.htm">
+  </contextentry>
+  <contextentry id="93" page="tools\nonLinearFilterOp.htm">
+  </contextentry>
+  <contextentry id="30" page="tools\channel.htm">
+  </contextentry>
+  <contextentry id="64" page="contact\contact.htm">
+  </contextentry>
+  <contextentry id="62" page="user_interface/project_window.htm#top">
+  </contextentry>
+  <contextentry id="76" page="user_interface\rectification.htm">
+  </contextentry>
+  <contextentry id="74" page="user_interface\main_windows_menu.htm">
+  </contextentry>
+  <contextentry id="78" page="tools/multiview.htm#pref">
+  </contextentry>
+  <contextentry id="61" page="user_interface/project_window.htm#menu">
+  </contextentry>
+  <contextentry id="40" page="tools/note.htm#pref">
+  </contextentry>
+  <contextentry id="56" page="user_interface\project_props.htm">
+  </contextentry>
+  <contextentry id="84" page="tools\arithmeticOp.htm">
+  </contextentry>
+  <contextentry id="17" page="user_interface/data_viewer.htm#class">
+  </contextentry>
+  <contextentry id="27" page="getting_started/getting_help.htm#onlineHelp">
+  </contextentry>
+  <contextentry id="39" page="tools\note.htm">
+  </contextentry>
+  <contextentry id="6" page="tools\background.htm">
+  </contextentry>
+  <contextentry id="14" page="user_interface\context_dialog.htm">
+  </contextentry>
+  <contextentry id="11" page="user_interface\class_editor.htm">
+  </contextentry>
+  <contextentry id="72" page="tools/profile.htm#pref">
+  </contextentry>
+  <contextentry id="13" page="user_interface\color_objects.htm">
+  </contextentry>
+  <contextentry id="59" page="user_interface\project_window.htm">
+  </contextentry>
+  <contextentry id="48" page="user_interface/main_options_menu.htm#loc">
+  </contextentry>
+  <contextentry id="63" page="contact\bugs.htm">
+  </contextentry>
+  <contextentry id="4" page="tools/measure2d.htm#pref">
+  </contextentry>
+  <contextentry id="2" page="tools/measure1d.htm#pref">
+  </contextentry>
+  <contextentry id="1" page="tools\measure1d.htm">
+  </contextentry>
+  <contextentry id="3" page="tools\measure2d.htm">
+  </contextentry>
+  <contextentry id="7" page="tools\background_descriptors.htm">
+  </contextentry>
+  <contextentry id="83" page="tools\BinaryOp.htm">
+  </contextentry>
+  <contextentry id="96" page="tools\segmentationOp.htm">
+  </contextentry>
+  <contextentry id="18" page="tools\display.htm">
+  </contextentry>
+  <contextentry id="90" page="tools\logicOp.htm">
+  </contextentry>
+  <contextentry id="43" page="tools/object_extraction.htm#pref">
+  </contextentry>
+  <contextentry id="85" page="tools\channelOp.htm">
+  </contextentry>
+  <contextentry id="70" page="user_interface\texture_dialog.htm">
+  </contextentry>
+  <contextentry id="9" page="tools\calibration.htm">
+  </contextentry>
+  <contextentry id="25" page="tools\general_description.htm">
+  </contextentry>
+  <contextentry id="57" page="user_interface/project_props.htm#defaultProject">
+  </contextentry>
+  <contextentry id="21" page="user_interface\feret_dialog.htm">
+  </contextentry>
+  <contextentry id="97" page="tools\watershed.htm">
+  </contextentry>
+  <contextentry id="91" page="tools\lutOp.htm">
+  </contextentry>
+  <contextentry id="89" page="tools\kmeans.htm">
+  </contextentry>
+  <contextentry id="54" page="user_interface\project_menu.htm">
+  </contextentry>
+  <contextentry id="65" page="getting_started\file_format.htm">
+  </contextentry>
+  <contextentry id="52" page="tools/point_counting.htm#pref">
+  </contextentry>
+  <contextentry id="33" page="getting_started\keys.htm">
+  </contextentry>
+  <contextentry id="36" page="tools/lens.htm#pref">
+  </contextentry>
+  <contextentry id="26" page="getting_started\getting_help.htm">
+  </contextentry>
+  <contextentry id="71" page="tools\profile.htm">
+  </contextentry>
+  <contextentry id="31" page="tools\image_factory.htm">
+  </contextentry>
+  <contextentry id="29" page="user_interface\threshold.htm">
+  </contextentry>
+  <contextentry id="66" page="getting_started/file_format.htm#data">
+  </contextentry>
+  <contextentry id="15" page="user_interface\data_viewer.htm">
+  </contextentry>
+  <contextentry id="68" page="getting_started/file_format.htm#savingImage">
+  </contextentry>
+  <contextentry id="5" page="user_interface\area.htm">
+  </contextentry>
+  <contextentry id="80" page="tools/object_extraction.htm#separation">
+  </contextentry>
+  <contextentry id="10" page="tools/calibration.htm#pref">
+  </contextentry>
+  <contextentry id="86" page="tools\classicFilterOp.htm">
+  </contextentry>
+  <contextentry id="22" page="user_interface\project_file_menu.htm">
+  </contextentry>
+  <contextentry id="60" page="user_interface/project_window.htm#bottom">
+  </contextentry>
+  <contextentry id="88" page="tools\gradientFilterOp.htm">
+  </contextentry>
+  <contextentry id="49" page="user_interface/main_options_menu.htm#LookandFeel">
+  </contextentry>
+  <contextentry id="20" page="introduction\licence.htm">
+  </contextentry>
+  <contextentry id="8" page="tools/background.htm#pref">
+  </contextentry>
+  <contextentry id="79" page="tools/object_extraction.htm#convert2D">
+  </contextentry>
+  <contextentry id="42" page="tools\object_extraction.htm">
+  </contextentry>
+  <contextentry id="24" page="user_interface/main_file_menu.htm#convertToTile">
+  </contextentry>
+  <contextentry id="73" page="introduction\welcome.htm">
+  </contextentry>
+  <contextentry id="23" page="user_interface\main_file_menu.htm">
+  </contextentry>
+  <contextentry id="38" page="user_interface/main_window.htm#mainmenu">
+  </contextentry>
+  <contextentry id="77" page="tools\multiview.htm">
+  </contextentry>
+  <contextentry id="81" page="tools/object_extraction.htm#threshold">
+  </contextentry>
+  <contextentry id="19" page="tools/display.htm#pref">
+  </contextentry>
+  <contextentry id="51" page="tools\point_counting.htm">
+  </contextentry>
+  <contextentry id="28" page="user_interface\main_help_menu.htm">
+  </contextentry>
+  <contextentry id="75" page="tools\wand.htm">
+  </contextentry>
+  <contextentry id="32" page="user_interface\image_list.htm">
+  </contextentry>
+  <contextentry id="12" page="user_interface\supervised_classif.htm">
+  </contextentry>
+  <contextentry id="87" page="tools\enhancementOp.htm">
+  </contextentry>
+  <contextentry id="34" page="user_interface\labeling.htm">
+  </contextentry>
+  <contextentry id="95" page="tools\rasterizeOp.htm">
+  </contextentry>
+  <contextentry id="47" page="user_interface\main_options_menu.htm">
+  </contextentry>
+  <contextentry id="37" page="user_interface\main_window.htm">
+  </contextentry>
+  <contextentry id="82" page="tools/object_extraction.htm#wand">
+  </contextentry>
+  <contextentry id="58" page="user_interface\project_toolbar.htm">
+  </contextentry>
+  <contextentry id="92" page="tools\MorphologyOp.htm">
+  </contextentry>
+  <contextentry id="41" page="tools\object_descriptors.htm">
+  </contextentry>
+  <contextentry id="98" page="tools/object_extraction.htm#objects">
+  </contextentry>
+  <contextentry id="67" page="getting_started/file_format.htm#jvm">
+  </contextentry>
+  <contextentry id="94" page="tools\pluginsOp.htm">
+  </contextentry>
+ </contextmap>
+ <topiclist defaulttopic="introduction\welcome.htm">
+  <topic>tools\MorphologyOp.htm
+  </topic>
+  <topic>user_interface\main_windows_menu.htm
+  </topic>
+  <topic>tools\channel.htm
+  </topic>
+  <topic>tools\logicOp.htm
+  </topic>
+  <topic>tools\profile.htm
+  </topic>
+  <topic>tools\wand.htm
+  </topic>
+  <topic>tools\measure1d.htm
+  </topic>
+  <topic>user_interface\class_editor.htm
+  </topic>
+  <topic>user_interface\context_dialog.htm
+  </topic>
+  <topic>tools\rasterizeOp.htm
+  </topic>
+  <topic>tools\BinaryOp.htm
+  </topic>
+  <topic>user_interface\project_menu.htm
+  </topic>
+  <topic>user_interface\main_window.htm
+  </topic>
+  <topic>getting_started\file_format.htm
+  </topic>
+  <topic>tools\arithmeticOp.htm
+  </topic>
+  <topic>tools\point_counting.htm
+  </topic>
+  <topic>user_interface\project_props.htm
+  </topic>
+  <topic>tools\general_description.htm
+  </topic>
+  <topic>user_interface\area.htm
+  </topic>
+  <topic>user_interface\threshold.htm
+  </topic>
+  <topic>tools\enhancementOp.htm
+  </topic>
+  <topic>contact\bugs.htm
+  </topic>
+  <topic>user_interface\color_objects.htm
+  </topic>
+  <topic>user_interface\project_window.htm
+  </topic>
+  <topic>tools\lens.htm
+  </topic>
+  <topic>tools\gradientFilterOp.htm
+  </topic>
+  <topic>introduction\licence.htm
+  </topic>
+  <topic>tools\segmentationOp.htm
+  </topic>
+  <topic>tools\object_extraction.htm
+  </topic>
+  <topic>user_interface\labeling.htm
+  </topic>
+  <topic>user_interface\texture_dialog.htm
+  </topic>
+  <topic>tools\calibration.htm
+  </topic>
+  <topic>tools\channelOp.htm
+  </topic>
+  <topic>getting_started\keys.htm
+  </topic>
+  <topic>user_interface\project_toolbar.htm
+  </topic>
+  <topic>tools\display.htm
+  </topic>
+  <topic>tools\nonLinearFilterOp.htm
+  </topic>
+  <topic>user_interface\main_help_menu.htm
+  </topic>
+  <topic>tools\object_descriptors.htm
+  </topic>
+  <topic>user_interface\main_options_menu.htm
+  </topic>
+  <topic>tools\watershed.htm
+  </topic>
+  <topic>tools\note.htm
+  </topic>
+  <topic>user_interface\image_list.htm
+  </topic>
+  <topic>user_interface\data_viewer.htm
+  </topic>
+  <topic>tools\image_factory.htm
+  </topic>
+  <topic>tools\background.htm
+  </topic>
+  <topic>introduction\welcome.htm
+  </topic>
+  <topic>user_interface\feret_dialog.htm
+  </topic>
+  <topic>tools\lutOp.htm
+  </topic>
+  <topic>getting_started\getting_help.htm
+  </topic>
+  <topic>user_interface\project_file_menu.htm
+  </topic>
+  <topic>user_interface\rectification.htm
+  </topic>
+  <topic>tools\classicFilterOp.htm
+  </topic>
+  <topic>user_interface\main_file_menu.htm
+  </topic>
+  <topic>tools\multiview.htm
+  </topic>
+  <topic>tools\background_descriptors.htm
+  </topic>
+  <topic>tools\kmeans.htm
+  </topic>
+  <topic>tools\measure2d.htm
+  </topic>
+  <topic>user_interface\supervised_classif.htm
+  </topic>
+  <topic>tools\pluginsOp.htm
+  </topic>
+  <topic>contact\contact.htm
+  </topic>
+ </topiclist>
+ <projectincludes>
+ </projectincludes>
+ <filenamemap>
+  <filenameentry moniker="wh_languagetype">
+   <filename>en_US
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="toc">
+   <filename>JMicroVision.hhc
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="ndx">
+   <filename>JMicroVision.hhk
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="nls">
+   <filename>JMicroVision.nla
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="gls">
+   <filename>JMicroVision.glo
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="wh_websearch">
+   <filename>JMicroVision.ews
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="wh_lngfile">
+   <filename>JMicroVision.lng
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="wh_stoplist">
+   <filename>JMicroVision.stp
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="sym">
+   <filename>JMicroVision.syn
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="keywordinfo">
+   <filename>SearchOptions.xml
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="favicon">
+   <filename>favicon.ico
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="hiderankcolumn">
+   <filename>0
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="enabletotalnumberofsearchresults">
+   <filename>1
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="giveandsearch">
+   <filename>0
+   </filename>
+  </filenameentry>
+  <filenameentry moniker="enableandsearch">
+   <filename>0
+   </filename>
+  </filenameentry>
+ </filenamemap>
+</ppfml>

@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+
+<html>
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+  <!-- InstanceBeginEditable name="doctitle" -->
+
+  <title>Histogram Thresholding</title><!-- InstanceEndEditable -->
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+ <!-- InstanceBeginEditable name="head" -->
+ <!-- InstanceEndEditable -->
+  <link href="../contenu.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8"></script>
+
+ <meta name="generator" content="Adobe RoboHelp 2017" />
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("User Interface\nProject Windows\nHistogram Thresholding");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../JMicroVision.htm", "", ">", "Accueil", "../introduction/welcome.htm");
+document.write("<a href=\"main_file_menu.htm\">User Interface<\/a> > <a href=\"project_window.htm\">Project Windows<\/a> > Histogram Thresholding<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../JMicroVision.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="../ehlpdhtm.js"></script>
+
+  <table width="99%" border="0" cellpadding="5" cellspacing="0">
+    <tr>
+      <td align="left" valign="middle" bgcolor="#E4A54E">
+        <h1><!-- InstanceBeginEditable name="titre" -->
+         Histogram Thresholding<!-- InstanceEndEditable --></h1>
+      </td>
+
+      <td align="right" valign="middle" bgcolor="#E4A54E"><img src="../images/logForWeb.gif" width="71" height="27" alt=""></td>
+    </tr>
+  </table>
+  <!-- InstanceBeginEditable name="texte" -->  
+<table width="99%"  border="0" cellpadding="5">
+    <tr>
+      <td align="left" valign="top"><p><img src="../images/threshold.gif" width="281" height="337"></p>
+      </td>
+      <td align="left" valign="top"><p>Histogram thresholding is used by the <a href="../tools/object_extraction.htm"><strong>Object Extraction</strong></a>, <a href="../tools/background.htm"><strong>Background </strong></a>and <a href="../tools/image_factory.htm"><strong>Image Factory</strong></a> (segmentation) tools to select a range of pixel values that should match to what you want to select in the image. </p>
+        <p> Thresholding is a technique for converting a grayscale or color image to a binary image based upon two threshold values. The histogram presents the frequency of intensity values of a channel in an image (see <a href="../tools/channel.htm">Image Types</a>). The threshold values (min and max) can be applied by moving the arrows above the histogram or by using an automatic threshold method.</p>
+        <p>&nbsp;</p></td>
+    </tr>
+  </table>
+  <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note:</strong> The histogram represents the intensity values of the visible part of the image only. After moving the image, use the <strong>Refresh</strong> button to update the histogram.</p>
+  <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note:</strong> The <a href="../tools/image_factory.htm"><strong>Image Factory</strong></a> tool offers some image preprocessing functions (e.g. to reduce noise). </p>
+  <p><strong>Image</strong>: Select one image in the list.</p>
+  <p><strong>Channel</strong>: Select the <strong>RGB</strong> or <strong>IHS</strong> channels for a color image (see <a href="../tools/channel.htm">Image Types</a>)</p>
+  <p><strong>Inverse</strong>: Inverse the selection values. </p>
+  <p><strong>- +</strong>: Shrink or stretch the histogram vertically.</p>
+  <p><strong>Auto</strong>: In the combo box, select an automatic histogram threshold method. Then click on the <strong>Auto</strong> button to find the appropriate max threshold value (min is always equal to 0).</p>
+  <ul style="list-style-image:url(../images/blueListBull.gif) ">
+    <li><strong>Iterative bisection</strong> finds the midpoint in an iterative fashion.</li>
+    <li><strong>Max variance</strong> maximizes the ratio of the between-class variance to the within-class variance.</li>
+    <li><strong>Max entropy</strong> maximizes the entropy.</li>
+    <li><strong>Min error</strong> minimizes the probability of error.</li>
+    <li><strong>Min fuzziness</strong> minimizes the fuzziness.</li>
+  </ul>
+  <p><strong>Refresh</strong>: Refresh the histogram according to the visible part of the image. </p>
+  <p><strong>Selection Color</strong>: Change the selection color on the image and between the arrows of the histogram.</p>
+  <h3>&nbsp;</h3>
+  <h3>Color Picker</h3>
+  <p>This tool offers  an alternative method to select a range in the histogram  by picking colors in the image. The selection results of the min and max  values of the pixels, which are displayed in the dialog at the left of the picker button <img src="../images/picker.png" width="16" height="16">. </p>
+  <p><img src="../images/picker.png" width="16" height="16">: Click on this button, then move the cross cursor on the image and finally click on the desired area to make a new selection.</p>
+  <p><img src="../images/undo.png" width="16" height="16">: Undo the selection (only the last selection can be restored). </p>
+  <p><img src="../images/delete2.png" width="16" height="16">: Clear the current selection.</p>
+  <p><strong>Selection</strong>: When <strong>Add</strong> is selected, the new selection does not replace  the previous.</p>
+  <p><strong>Size</strong>: Set the size of the picker.</p>
+  <p><strong>Tolerance</strong>: Increase the min and max picked values.</p>
+  <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note:</strong> Adjusting the slider after the selection  has no effect. </p>
+  <p>&nbsp; </p>
+  <!-- InstanceEndEditable --><!-- InstanceEnd -->
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

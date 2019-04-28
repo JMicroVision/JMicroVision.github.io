@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+
+<html>
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+  <!-- InstanceBeginEditable name="doctitle" -->
+
+  <title>Image Factory</title><!-- InstanceEndEditable -->
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+  <link href="../contenu.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8"></script>
+
+ <meta name="generator" content="Adobe RoboHelp 2017" />
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Tools\nImage Factory");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../JMicroVision.htm", "", ">", "Accueil", "../introduction/welcome.htm");
+document.write("<a href=\"general_description.htm\">Tools<\/a> > Image Factory<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../JMicroVision.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="../ehlpdhtm.js"></script>
+
+  <table width="99%" border="0" cellpadding="5" cellspacing="0">
+    <tr>
+      <td align="left" valign="middle" bgcolor="#E4A54E">
+        <h1><!-- InstanceBeginEditable name="titre" -->
+         Image Factory<!-- InstanceEndEditable --></h1>
+      </td>
+
+      <td align="right" valign="middle" bgcolor="#E4A54E"><img src="../images/logForWeb.gif" width="71" height="27" alt=""></td>
+    </tr>
+  </table><!-- InstanceBeginEditable name="texte" -->
+    <table width="99%"  border="0" cellpadding="5">
+    <tr>
+      <td align="left" valign="top"><p><img src="../images/imgFactory.gif" width="200" height="323" alt=""></p>      </td>
+      <td align="left" valign="top"><p>The Image Factory <img src="../images/image.png" width="16" height="16" alt=""> allows performing   image processing operations. For creating a new image, just select an operation <strong>Type</strong>, an <strong>Operation</strong>, a <strong>Source</strong> image,  an <strong>Area</strong> (the operation will be limited to an area, see <a href="../user_interface/area.htm"><strong>Area Editor</strong></a>), modify if <span id=BABID_Results><span>necessary</span></span> the parameters specific to the selected operation, and finally, for adding the resulting image  to the project, click on the <strong>Add Image</strong> button. </p>
+        <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt=""><strong>Note</strong>: When an operation is selected, the resulting image is immediately visible in the main view (the selected image in the toolbar is <strong>current operation</strong>). For getting an optimal speed of  image display, it is recommend to set the zoom at 100% (or click on <img src="../images/zoomActualSize.png" width="16" height="16">).</p></td>
+    </tr>
+  </table>
+
+    <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt=""><strong> Note:</strong> All images added to the project  are saved in the <a href="../getting_started/file_format.htm#jvm">JMicroVision Project file</a>. Only the operation on an image is saved instead of the bitmap file, what considerably reduces the file size.</p>
+
+    <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt=""><strong> Note:</strong> For renaming, removing or saving an image, see <a href="../user_interface/image_list.htm"><strong>Image List Editor</strong></a>.</p>
+  <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note: </strong>Most of the processes can be stopped by clicking on their progress bar, except for instance loading or saving images.</p>
+  <p class="note">&nbsp;</p>
+  For getting  more information about specific  operation types:
+  <ul style="list-style-image:url(../images/blueListBull.gif) ">
+    <li><strong>      <a href="segmentationOp.htm">Segmentation</a></strong></li>
+    <li><strong>      <a href="arithmeticOp.htm">Arithmetic</a></strong></li>
+    <li><strong>      <a href="logicOp.htm">Logic</a></strong></li>
+    <li><strong>      <a href="classicFilterOp.htm">Classic Filtering</a></strong></li>
+    <li><strong>      <a href="nonLinearFilterOp.htm">Nonlinear Filtering</a></strong></li>
+    <li><strong>      <a href="gradientFilterOp.htm">Gradient Filtering</a></strong></li>
+    <li><strong>      <a href="BinaryOp.htm">Binary</a></strong></li>
+    <li><strong>      <a href="MorphologyOp.htm">Morphology</a></strong></li>
+    <li><strong>      <a href="lutOp.htm">Pseudo Color</a></strong></li>
+    <li><strong> <a href="channelOp.htm">Channel</a></strong></li>
+    <li><strong>      <a href="enhancementOp.htm">Enhancement</a></strong></li>
+    <li><strong>      <a href="rasterizeOp.htm">Rasterize Drawings</a></strong></li>
+    <li><strong>      <a href="pluginsOp.htm">Plugins</a></strong></li>
+  </ul>
+  <h3>Markers<a name="marker"></a></h3>
+  <p>The markers are vector drawings. They can be useful for retouching an image (c.f. separate objects in a binary image), for creating masks (see <a href="logicOp.htm"><strong>Logic</strong></a>), for binary <strong><a href="BinaryOp.htm">Reconstruction</a></strong> or for <a href="watershed.htm">watershed segmentation </a>from markers. Once the markers are drawn, they can be rasterized (<a href="rasterizeOp.htm"><strong>Rasterize Drawings</strong></a> - Freehand Markers) or directly used by  <a href="watershed.htm">watershed segmentation</a>. </p>
+  <p><img src="../images/imageFactToolbar.gif" width="295" height="22"></p>
+  <p>In the marker toolbar above, the first toggle button allows selecting or moving markers, the second one allows drawing freehand lines (the <SPAN id=BABID_Results><SPAN>line thickness is defined in the center of the toolbar)</SPAN></SPAN>. The third one allows creating 2D shapes. The fourth one will delete the selected markers. In the right part of the toolbar, select a class to assign to the markers that will draw. The last button opens the marker class editor (see <a href="../user_interface/class_editor.htm"><strong>Class Editor</strong></a>). The number of classes is limited to 254. </p>
+  <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt=""><strong>Note</strong>: For changing the class of a marker, double-click on it or select <strong>Properties</strong> in the contextual menu to display a dialog which permits to change the class.</p>
+  <p>&nbsp;</p>
+  <!-- InstanceEndEditable --><!-- InstanceEnd -->
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

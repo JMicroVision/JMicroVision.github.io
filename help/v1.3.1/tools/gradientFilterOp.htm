@@ -1,0 +1,311 @@
+<!DOCTYPE HTML>
+
+<html>
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+  <!-- InstanceBeginEditable name="doctitle" -->
+
+  <title>Gradient Filtering</title><!-- InstanceEndEditable -->
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <!-- InstanceBeginEditable name="head" -->
+  <!-- InstanceEndEditable -->
+  <link href="../contenu.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8"></script>
+
+ <meta name="generator" content="Adobe RoboHelp 2017" />
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Image Operations\nGradient Filtering");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../JMicroVision.htm", "", ">", "Accueil", "../introduction/welcome.htm");
+document.write("<a href=\"segmentationOp.htm\">Image Operations<\/a> > Gradient Filtering<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../JMicroVision.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="../ehlpdhtm.js"></script>
+
+  <table width="99%" border="0" cellpadding="5" cellspacing="0">
+    <tr>
+      <td align="left" valign="middle" bgcolor="#E4A54E">
+        <h1><!-- InstanceBeginEditable name="titre" -->
+         Gradient Filtering<!-- InstanceEndEditable --></h1>
+      </td>
+
+      <td align="right" valign="middle" bgcolor="#E4A54E"><img src="../images/logForWeb.gif" width="71" height="27" alt=""></td>
+    </tr>
+  </table><!-- InstanceBeginEditable name="texte" -->
+
+  <p>The gradient filtering operation is an edge detector which computes the magnitude of the image gradient vector in two orthogonal directions. The operation may be defined as: </p>
+  <p><img src="../images/magnitudeGradient.png" width="160" height="40"></p>
+  where Gx and Gy are the horizontal and vertical gradient images generated from the source image by correlating it with the supplied orthogonal (horizontal and vertical) gradient masks (Kx and ky).
+  <h3>Sobel</h3>
+  <table border="0">
+    <tr>
+      <td>Kx =</td>
+      <td><table border="1">
+        <tr align="center">
+          <td class="tableItem">1</td>
+          <td class="tableItem">0</td>
+          <td class="tableItem">-1</td>
+        </tr>
+        <tr align="center">
+          <td class="tableItem">2</td>
+          <td class="tableItem">0</td>
+          <td class="tableItem">-2</td>
+        </tr>
+        <tr align="center">
+          <td class="tableItem">1</td>
+          <td class="tableItem">0</td>
+          <td class="tableItem">-1</td>
+        </tr>
+      </table></td>
+      <td>&nbsp;</td>
+      <td>Ky =</td>
+      <td><table border="1">
+        <tr align="center">
+          <td class="tableItem">-1</td>
+          <td class="tableItem">-2</td>
+          <td class="tableItem">-1</td>
+        </tr>
+        <tr align="center">
+          <td class="tableItem">0</td>
+          <td class="tableItem">0</td>
+          <td class="tableItem">0</td>
+        </tr>
+        <tr align="center">
+          <td class="tableItem">1</td>
+          <td class="tableItem">2</td>
+          <td class="tableItem">1</td>
+        </tr>
+      </table></td>
+    </tr>
+  </table>
+  <h3>Roberts</h3>
+  <table border="0">
+    <tr>
+      <td>Kx =</td>
+      <td><table border="1">
+          <tr align="center">
+            <td class="tableItem">0</td>
+            <td class="tableItem">0</td>
+            <td class="tableItem">-1</td>
+          </tr>
+          <tr align="center">
+            <td class="tableItem">0</td>
+            <td class="tableItem">1</td>
+            <td class="tableItem">0</td>
+          </tr>
+          <tr align="center">
+            <td class="tableItem">0</td>
+            <td class="tableItem">0</td>
+            <td class="tableItem">0</td>
+          </tr>
+      </table></td>
+      <td>&nbsp;</td>
+      <td>Ky =</td>
+      <td><table border="1">
+          <tr align="center">
+            <td class="tableItem">-1</td>
+            <td class="tableItem">0</td>
+            <td class="tableItem">0</td>
+          </tr>
+          <tr align="center">
+            <td class="tableItem">0</td>
+            <td class="tableItem">1</td>
+            <td class="tableItem">0</td>
+          </tr>
+          <tr align="center">
+            <td class="tableItem">0</td>
+            <td class="tableItem">0</td>
+            <td class="tableItem">0</td>
+          </tr>
+      </table></td>
+    </tr>
+  </table>
+  <h3>Prewitt</h3>
+  <table border="0">
+    <tr>
+      <td>Kx =</td>
+      <td><table border="1">
+          <tr align="center">
+            <td class="tableItem">1</td>
+            <td class="tableItem">0</td>
+            <td class="tableItem">-1</td>
+          </tr>
+          <tr align="center">
+            <td class="tableItem">1</td>
+            <td class="tableItem">0</td>
+            <td class="tableItem">-1</td>
+          </tr>
+          <tr align="center">
+            <td class="tableItem">1</td>
+            <td class="tableItem">0</td>
+            <td class="tableItem">-1</td>
+          </tr>
+      </table></td>
+      <td>&nbsp;</td>
+      <td>Ky =</td>
+      <td><table border="1">
+          <tr align="center">
+            <td class="tableItem">-1</td>
+            <td class="tableItem">-1</td>
+            <td class="tableItem">-1</td>
+          </tr>
+          <tr align="center">
+            <td class="tableItem">0</td>
+            <td class="tableItem">0</td>
+            <td class="tableItem">0</td>
+          </tr>
+          <tr align="center">
+            <td class="tableItem">1</td>
+            <td class="tableItem">1</td>
+            <td class="tableItem">1</td>
+          </tr>
+      </table></td>
+    </tr>
+  </table>
+  <h3>Freichen</h3>
+
+  <table border="0">
+    <tr>
+      <td>Kx =</td>
+      <td><table border="1">
+          <tr align="center">
+            <td class="tableItem">1</td>
+            <td class="tableItem">0</td>
+            <td class="tableItem">-1</td>
+          </tr>
+          <tr align="center">
+            <td class="tableItem">1.414</td>
+            <td class="tableItem">0</td>
+            <td class="tableItem">-1.414</td>
+          </tr>
+          <tr align="center">
+            <td class="tableItem">1</td>
+            <td class="tableItem">0</td>
+            <td class="tableItem">-1</td>
+          </tr>
+      </table></td>
+      <td>&nbsp;</td>
+      <td>Ky =</td>
+      <td><table border="1">
+          <tr align="center">
+            <td class="tableItem">-1</td>
+            <td class="tableItem">-1.414</td>
+            <td class="tableItem">-1</td>
+          </tr>
+          <tr align="center">
+            <td class="tableItem">0</td>
+            <td class="tableItem">0</td>
+            <td class="tableItem">0</td>
+          </tr>
+          <tr align="center">
+            <td class="tableItem">1</td>
+            <td class="tableItem">1.414</td>
+            <td class="tableItem">1</td>
+          </tr>
+      </table></td>
+    </tr>
+  </table>
+  <p>&#160;</p>
+
+  <p><img height="13" src="../images/hg_see.gif" width="18" alt=""><b>See also:</b></p>
+
+  <dl>
+    <dd><a href="image_factory.htm">Image Factory</a>, <a href="classicFilterOp.htm">Classic Filtering</a></dd>
+    <dt>&nbsp;</dt>
+  </dl>
+
+  <!-- InstanceEndEditable --><!-- InstanceEnd -->
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

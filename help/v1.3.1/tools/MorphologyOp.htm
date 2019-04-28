@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+
+<html>
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+  <!-- InstanceBeginEditable name="doctitle" -->
+
+  <title>Morphology</title><!-- InstanceEndEditable -->
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+  <link href="../contenu.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8"></script>
+
+ <meta name="generator" content="Adobe RoboHelp 2017" />
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Image Operations\nMorphology");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../JMicroVision.htm", "", ">", "Accueil", "../introduction/welcome.htm");
+document.write("<a href=\"segmentationOp.htm\">Image Operations<\/a> > Morphology<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../JMicroVision.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="../ehlpdhtm.js"></script>
+
+  <table width="99%" border="0" cellpadding="5" cellspacing="0">
+    <tr>
+      <td align="left" valign="middle" bgcolor="#E4A54E">
+        <h1><!-- InstanceBeginEditable name="titre" -->
+         Morphology<!-- InstanceEndEditable --></h1>
+      </td>
+
+      <td align="right" valign="middle" bgcolor="#E4A54E"><img src="../images/logForWeb.gif" width="71" height="27" alt=""></td>
+    </tr>
+  </table><!-- InstanceBeginEditable name="texte" -->
+  <table width="99%" border="0" cellpadding="5">
+    <tr>
+      <td align="left" valign="top"><p><img src="../images/imgFactory.gif" width="200" height="323" alt=""></p></td>
+      <td align="left" valign="top"><p>Like spatial filters, morphological operations also work with pixel neighborhood. However, kernel coefficients do not multiply the neighborhood values. In mathematical morphology, the kernel is a structuring element.
+The two most basic operations  are
+          erosion and dilation also known as Minkowski subtraction and addition.</p>
+      <p>The operators are particularly useful for   edge detection, noise removal and image enhancement.</p>
+      <p>&nbsp;</p></td>
+    </tr>
+  </table>
+  <p><SPAN class=BAB_CPTermStyle><strong>Preestablished</strong></SPAN><strong> kernels</strong>: Basic  kernels are available in the structuring element list (Square, Disk, Disk 2, Cross, Ring, Horizontal line, Vertical line). </p>
+  <p>However, it is possible to add new custom structuring elements to the list by pressing the <strong>New Element</strong> button. For removing a custom element, select the desired element and press the <strong>Delete</strong> button. </p>
+  <p>The Custom Structuring Element dialog  allows to create common elements with two values (0 and 1) and grayscale structuring elements (integers from 0 to 255). Here zeros represent blank values which do not belong to the structuring element.</p>
+  <p><strong>Kernel Size</strong>: Define the size of the kernel.</p>
+  <p><strong>Kernel origin</strong>: X and Y position of the kernel origin (the position of the first cell  is 0,0).</p>
+  <p class="note"> <img height="19" src="../images/pencil.gif" width="15" alt=""><strong>Note</strong>: The small green rectangle   indicates the origin. </p>
+  <p><strong>Apply Element</strong>: Apply the structuring element to the current image. </p>
+  <p><strong>Add Element</strong>: Add the current element  to the  structuring element list (The element is set permanently to JMicroVision). </p>
+  <p>&nbsp;</p>
+  <h3>Erosion</h3>
+  <p>This operation erodes bright regions on the image.</p>
+  <h3>Dilation</h3>
+  <p>This operation dilates bright regions on the image.</p>
+  <h3>Opening</h3>
+  <p>This operation (Erosion followed by Dilation) separates narrowly connected bright regions and removes small ones.</p>
+  <h3>Closing</h3>
+  <p>This operation (Dilation followed by Erosion) fills holes in bright regions and connects bright regions that are close.</p>
+  <h3>Internal Gradient</h3>
+  <p>This operation is an edge detector that 
+
+
+extracts the internal contours of bright regions. The eroded image is subtracted from the original one. &nbsp;&nbsp;</p>
+  <h3>External Gradient</h3>
+  <p> This operation is an edge detector that 
+
+
+extracts the external contours of bright regions. The original image is subtracted from the dilated one. &nbsp;</p>
+  <h3>Black TopHat</h3>
+  <p>This operation detects small dark regions. The closed image is subtracted from the original one.</p>
+  <h3>White TopHat</h3>
+
+  <p>This operation detects small bright regions. The opened image is subtracted from the original one.</p>
+  <p>&nbsp;</p>
+  <p><img height="13" src="../images/hg_see.gif" width="18" alt=""><b>See also:</b></p>
+
+  <dl>
+    <dd><a href="image_factory.htm">Image Factory</a></dd>
+  </dl>
+
+  <p>&#160;</p><!-- InstanceEndEditable --><!-- InstanceEnd -->
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

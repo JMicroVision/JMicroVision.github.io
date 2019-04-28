@@ -1,0 +1,1 @@
+gXMLBuffer="<?xml version=\"1.0\" encoding=\"UTF-8\"?><cki><ck fm=\"Sending Bug Reports\" to=\"Histogram Thresholding\" num=\"61\"/></cki>";

@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+
+<html>
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+  <!-- InstanceBeginEditable name="doctitle" -->
+
+  <title>Segmentation</title><!-- InstanceEndEditable -->
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+  <link href="../contenu.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8"></script>
+
+ <meta name="generator" content="Adobe RoboHelp 2017" />
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Image Operations\nSegmentation");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../JMicroVision.htm", "", ">", "Accueil", "../introduction/welcome.htm");
+document.write("<a href=\"segmentationOp.htm\">Image Operations<\/a> > Segmentation<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../JMicroVision.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="../ehlpdhtm.js"></script>
+
+  <table width="99%" border="0" cellpadding="5" cellspacing="0">
+    <tr>
+      <td align="left" valign="middle" bgcolor="#E4A54E">
+        <h1><!-- InstanceBeginEditable name="titre" -->
+         Segmentation<!-- InstanceEndEditable --></h1>
+      </td>
+
+      <td align="right" valign="middle" bgcolor="#E4A54E"><img src="../images/logForWeb.gif" width="71" height="27" alt=""></td>
+    </tr>
+  </table><!-- InstanceBeginEditable name="texte" -->
+
+  <p>The goal of image segmentation is to detect and extract the regions which compose an image. Segmentation is a critical step in image analysis and also one of the most difficult tasks with nontrivial images. For these reasons, different methods are provided in JMicroVision.</p>
+
+  <p>&#160;</p>
+
+  <h3>Simple Binarization</h3>
+
+  <p>This operation  produces a binary image <span class="note">(see <a href="channel.htm">Image Types</a>)</span>. In automatic <a href="../user_interface/threshold.htm">histogram thresholding</a> the min threshold is always equal to 0 and the following methods give the max threshold value:</p>
+
+  <ul style="list-style-image:url(../images/blueListBull.gif)">
+    <li><strong>Iterative bisection</strong>: For each band an initial threshold is defined to be the midpoint of the range of data represented by the histogram. The mean value is calculated for each sub-histogram and a new threshold is defined as the arithmetic mean of the two sub-histogram means. This process is repeated until the threshold value no longer changes.</li>
+
+    <li><strong>Max variance</strong>: Calculates the threshold which maximizes the ratio of the between-class variance to the within-class variance for each band.</li>
+
+    <li><strong>Max entropy</strong>: The entropy of a range of gray levels is defined to be the negation of the sum of products of the probability and the logarithm thereof over all gray levels in the range. The maximum entropy threshold is defined to be the value which maximizes the sum of the entropy of the two ranges which are above and below the threshold, respectively. This computation is effected for each band.</li>
+
+    <li><strong>Min error</strong>: For each band the histogram is modeled as the sum of two Gaussian distributions and the threshold which minimizes the misclassification error is computed. If the underlying histogram is unimodal the mean value of each band will be returned as the threshold. The bimodality of the histogram for that band will be identically zero.</li>
+
+    <li><strong>Min fuzziness</strong>: Calculates the threshold which minimizes the fuzziness.</li>
+  </ul>
+
+  <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note:</strong> The color of the object (white) is referred to as the foreground color in the resulting image. The rest (black) is referred to as the background color.</p>
+
+  <h3>Color or gray intensity threshold</h3>
+
+  <p>See <a href="../user_interface/threshold.htm"><strong>Histogram Thresholding</strong></a>.</p>
+
+  <h3>k-means clustering</h3>
+
+  <p>See <a href="kmeans.htm"><strong>k-means clustering</strong></a>.</p>
+
+  <h3>Watershed</h3>
+
+  <p>See <a href="watershed.htm"><strong>Watershed</strong></a>.</p>
+
+  <p>&#160;</p>
+
+  <p><img height="13" src="../images/hg_see.gif" width="18" alt=""><b>See also:</b></p>
+
+  <dl>
+    <dd><a href="image_factory.htm">Image Factory</a></dd>
+
+    <dt>&#160;</dt>
+  </dl><!-- InstanceEndEditable --><!-- InstanceEnd -->
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

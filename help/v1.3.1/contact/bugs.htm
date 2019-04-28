@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html>
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 2017" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Sending Bug Reports</title>
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<link href="../contenu.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("Contact and Support\nSending Bug Reports");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../JMicroVision.htm", "", ">", "Accueil", "../introduction/welcome.htm");
+document.write("<a href=\"contact.htm\">Contact and Support<\/a> > Sending Bug Reports<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../JMicroVision.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<table cellspacing="0" width="99%">
+	<tr>
+		<td style="vertical-align: middle; text-align: left; padding-left: 5px; 
+			 padding-top: 5px; padding-right: 5px; padding-bottom: 5px;" 
+			 bgcolor="#E4A54E"><h1><!-- InstanceBeginEditable name="titre" -->Sending 
+		 Bug Reports <!-- InstanceEndEditable --></h1></td>
+		<td style="vertical-align: middle; text-align: right; padding-left: 5px; 
+			 padding-top: 5px; padding-right: 5px; padding-bottom: 5px;" 
+			 bgcolor="#E4A54E"><img src="../images/logForWeb.gif" alt="" 
+									 width="71" height="27" border="0" /></td>
+	</tr>
+</table>
+<!-- InstanceBeginEditable name="texte" -->
+  <p>If you encounter a problem with the program that may be a result of 
+ a programming error, you can report it to the bug tracker system at the 
+ following address: <a href="https://github.com/JMicroVision/jmicrovision/issues" 
+						 target="_blank">https://github.com/JMicroVision/jmicrovision/issues</a></p>
+<p>While all bug reports are welcome, they need to contain relevant information 
+ if they are to be of any use, especially all necessary details on how 
+ to repeat the problem.</p>
+<p class="note"><img src="../images/pencil.gif" alt="" width="15" height="19" 
+					 border="0" />&#160;<strong>Note:</strong> Before sending 
+ a bug report, always make sure that you are using the latest release, 
+ or at least check the <a href="https://github.com/JMicroVision/jmicrovision/blob/master/CHANGELOG.md">development 
+ history</a> or search with the bug tracker system if the issue was already 
+ addressed in one of the subsequent releases.</p>
+<p class="evidence"><img src="../images/BLTTRIA.gif" alt="" width="10" 
+						 height="13" border="0" />&#160;Guidelines to follow 
+ when submitting a bug report</p>
+<ul style="list-style-image: url('../images/blueListBull.gif');">
+	<li>Please, indicate the version of JMicroVision used.</li>
+	<li>Your operating system type and version.</li>
+	<li>Quick summary of your hardware (CPU type, speed, memory installed, 
+	 video device type, other details that may be relevant to the problem).</li>
+	<li>How does the problem exhibit: send the error messages of the errorLog.txt 
+	 file located in the user directory of JMicroVision ( ${user.home}./jmicrovision) 
+	 or, if the file does not contain error messages, make a short description 
+	 of what has happened.</li>
+	<li>What were the actions preceding the problem, when did the problem 
+	 occur.</li>
+	<li>Any of your own observations related to the problem (anything else 
+	 you may have noticed).</li>
+</ul>
+<p><img src="../images/hg_see.gif" alt="" width="18" height="13" border="0" /><b>See 
+ also:</b></p>
+<dl>
+	<dd><a href="https://github.com/JMicroVision/jmicrovision/blob/master/CHANGELOG.md" 
+			 target="_blank">Program History</a></dd>
+</dl>
+<p>&#160;</p>
+<!-- InstanceEndEditable --> 
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+<!-- InstanceEnd -->
+</html>

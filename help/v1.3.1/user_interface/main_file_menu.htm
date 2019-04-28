@@ -1,0 +1,200 @@
+<!DOCTYPE HTML>
+<html>
+<!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 2017" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>File Menu</title>
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<link href="../contenu.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+//<![CDATA[
+function reDo() {
+  if (innerWidth != origWidth || innerHeight != origHeight)
+     location.reload();
+}
+if ((parseInt(navigator.appVersion) == 4) && (navigator.appName == "Netscape")) {
+	origWidth = innerWidth;
+	origHeight = innerHeight;
+	onresize = reDo;
+}
+onerror = null; 
+//]]>
+</script>
+<style type="text/css">
+<!--
+div.WebHelpPopupMenu { position:absolute;
+left:0px;
+top:0px;
+z-index:4;
+visibility:hidden; }
+-->
+</style>
+<script type="text/javascript" language="javascript1.2" src="../whmsg.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript" src="../whver.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whutils.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whproxy.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8"></script>
+<script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8"></script>
+
+</head>
+
+<body><script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.gbWhTopic)
+{
+	var strUrl = document.location.href;
+	var bc = 0;
+	var n = strUrl.toLowerCase().indexOf("bc-");
+	if(n != -1)
+	{
+		document.location.replace(strUrl.substring(0, n));
+		bc = strUrl.substring(n+3);
+	}
+
+	if (window.addTocInfo)
+	{
+	addTocInfo("User Interface\nMain Menu\nFile Menu");
+addButton("show",BTN_TEXT,"Show","","","","",0,0,"","","");
+
+	}
+	if (window.writeBtnStyle)
+		writeBtnStyle();
+
+	if (window.writeIntopicBar)
+		writeIntopicBar(1);
+
+	
+	document.write("<p style=\"text-align:right\"> ");
+AddMasterBreadcrumbs("../JMicroVision.htm", "", ">", "Accueil", "../introduction/welcome.htm");
+document.write("<a href=\"main_file_menu.htm\">User Interface<\/a> > <a href=\"main_file_menu.htm\">Main Menu<\/a> > File Menu<\/p>");
+
+}
+else
+	if (window.gbIE4)
+		document.location.reload();
+
+onLoadHandler = function()
+{
+  if (window.setRelStartPage)
+	{
+	setTimeout("setRelStartPage('../JMicroVision.htm');", 1)
+
+    setTimeout("UpdateBreadCrumbsMarker();", 1);
+	}
+}
+
+if (window.addEventListener){  
+	window.addEventListener('load', onLoadHandler, false);   
+} else if (window.attachEvent){  
+	window.attachEvent('onload', onLoadHandler);  
+}
+
+function onSetStartPage()
+{
+  autoSync(1);
+  sendSyncInfo();
+  sendAveInfoOut();
+}
+//-->
+//]]></script>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<table cellspacing="0" width="99%">
+	<tr>
+		<td style="vertical-align: middle; text-align: left; padding-left: 5px; 
+			 padding-top: 5px; padding-right: 5px; padding-bottom: 5px;" 
+			 bgcolor="#E4A54E"><h1><!-- InstanceBeginEditable name="titre" -->
+         File Menu <!-- InstanceEndEditable --></h1></td>
+		<td style="vertical-align: middle; text-align: right; padding-left: 5px; 
+			 padding-top: 5px; padding-right: 5px; padding-bottom: 5px;" 
+			 bgcolor="#E4A54E"><img src="../images/logForWeb.gif" alt="" 
+									 width="71" height="27" border="0" /></td>
+	</tr>
+</table>
+<!-- InstanceBeginEditable name="texte" -->
+  <h2>New Project... <img src="../images/document_new.png" alt="" width="16" 
+							 height="16" border="0" /></h2>
+<h3>From Image...</h3>
+<p>Creates <span class="note">a new project from an image file with the 
+ current <a href="project_props.htm#defaultProject">default preferences</a>. 
+ At least a valid image path or the width and the height (creates a white 
+ image) must be specified. The <a href="../tools/calibration.htm">calibration</a> 
+ file path is optional. </span></p>
+<h3>From another Project...<a name="basedOnProject"></a></h3>
+<p>Creates <span class="note">a new project with a new image based on another 
+ project. A dialog let you choose which data to import to new project.</span></p>
+<p class="note"><img src="../images/pencil.gif" alt="" width="15" height="19" 
+					 border="0" />&#160;<strong>Note:</strong> <strong>Areas</strong> 
+ that have a region outside the image are automatically removed.</p>
+<p class="note"><img src="../images/pencil.gif" alt="" width="15" height="19" 
+					 border="0" />&#160;<strong>Note:</strong> Some image 
+ operations and the backgrounds need to be recalculated. The progress of 
+ these processes appears in the status bar. </p>
+<h3>From Data...</h3>
+<p>Creates <span class="note">a new project with the current <a href="project_props.htm#defaultProject">default 
+ preferences</a> from a text file containing a data table. The character 
+ delimiting the values must be selected. After pressing <strong>OK</strong>, 
+ an histogram appears. For redefining the range of the values, enter a 
+ new value in the text field <strong>Min</strong> or <strong>Max</strong>, 
+ otherwise just close it.</span></p>
+<h2>Open Project... <img src="../images/open.png" alt="" width="16" height="16" 
+						 border="0" /></h2>
+<p>Opens an existing project <span class="note">file with a &quot;<a href="../getting_started/file_format.htm#jvm">.jmv</a>&quot; 
+ extension</span>.</p>
+<p class="note"><img src="../images/pencil.gif" alt="" width="15" height="19" 
+					 border="0" />&#160;<strong>Note:</strong> If the main 
+ image link is not valid anymore, a dialog appears to resolve the image 
+ path.</p>
+<p class="note"><img src="../images/pencil.gif" alt="" width="15" height="19" 
+					 border="0" />&#160;<strong>Note:</strong> It is also 
+ possible to open a project by dragging a file in the workspace.</p>
+<h2>Open Image ... <img src="../images/open.png" alt="" width="16" height="16" 
+						 border="0" /></h2>
+<p>Opens an BMP, GIF, JPEG, PNG, PNM or TIFF image (see <a href="../getting_started/file_format.htm">file 
+ formats for loading images</a> for more specifications).</p>
+<p class="note"><img src="../images/pencil.gif" alt="" width="15" height="19" 
+					 border="0" />&#160;<strong>Note:</strong> When opening 
+ an image, a new <a href="project_props.htm#defaultProject">default project</a> 
+ is automatically created.</p>
+<p class="note"><img src="../images/pencil.gif" alt="" width="15" height="19" 
+					 border="0" />&#160;<strong>Note:</strong> It is also 
+ possible to open an image by dragging a file in the workspace. </p>
+<p>If the image width or height is larger than 768 pixels and if the image 
+ is not a tiled image, a popup asks you to optimize the image. If you press 
+ <strong>Yes</strong>, the image is converted to <a href="../getting_started/file_format.htm#savingImage">Tiled 
+ TIFF format</a> (it is strongly recommended for large images).</p>
+<p style="text-align: center;"><img src="../images/optimizePopup.gif" alt="" 
+									 width="324" height="84" border="0" /></p>
+<h2>Reopen <img src="../images/open.png" alt="" width="16" height="16" 
+				 border="0" /></h2>
+<p>Reopens a project (<img src="../images/project.png" alt="" width="16" 
+							 height="16" border="0" />) or an image (<img 
+	 src="../images/photo.png" alt="" width="16" height="16" border="0" />) 
+ previously opened. </p>
+<h2>Convert Images to Tiled TIFF<a name="convertToTile"></a> <img src="../images/convert.png" 
+	 alt="" width="16" height="16" border="0" /></h2>
+<p>Converts one or several images (BMP, GIF, JPEG, PNG, PNM and TIFF) to 
+ <a href="../getting_started/file_format.htm#savingImage">Tiled TIFF format</a>.</p>
+<p class="note"><img src="../images/pencil.gif" alt="" width="15" height="19" 
+					 border="0" />&#160;<strong>Note:</strong> Use &lt;Ctrl&gt; 
+ or &lt;Shift&gt; for selecting more than one image in the <strong>Open</strong> 
+ dialog box.</p>
+<h2>Exit</h2>
+<p>Closes all the opened projects and exits JMicroVision.</p>
+<p>&#160;</p>
+<!-- InstanceEndEditable --><!-- InstanceEnd -->
+<script type="text/javascript" language="javascript1.2">//<![CDATA[
+<!--
+if (window.writeIntopicBar)
+	writeIntopicBar(0);
+
+
+highlightSearch();
+//-->
+//]]></script>
+</body>
+</html>

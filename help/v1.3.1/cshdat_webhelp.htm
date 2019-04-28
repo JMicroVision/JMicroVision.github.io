@@ -1,0 +1,345 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>JMicroVision Help</title>
+
+<meta name="generator" content="Adobe RoboHelp 2017" />
+<meta name="description" content="WebHelp 5.50" />
+<script  src="whutils.js" charset="utf-8" charset="utf-8"></script>
+</head>
+<body>
+<script language="JavaScript">
+<!--
+
+var gArrayCsh = new Array();
+
+var gstrWindowOption = "";
+var gstrURL = "";
+var gbWithNavPane = false;
+
+function CshEntityItem(strAliasId, nTopicNum, strUrl) 
+{
+    this.strAliasId = strAliasId;
+    this.nTopicNum = nTopicNum;
+    this.strUrl = strUrl;
+}
+
+
+//Try to get to topic number from hash string
+function GetTopicNumberAuto(strMayBeNumber)
+{
+   var nNum = -1;
+   if (strMayBeNumber.length >= 1)
+   {
+		var strTmp = strMayBeNumber;
+		var iEnd = strTmp.length;
+		for (var i=0; i<iEnd; i++)
+		{
+			  var ch = strTmp.charAt(i);
+			  if (!((ch == "0") || (ch == "1") ||
+			        (ch == "2") || (ch == "3") ||
+			        (ch == "4") || (ch == "5") ||
+			        (ch == "6") || (ch == "7") ||
+			        (ch == "8") || (ch == "9")))
+			      return GetTopicNumberById(strTmp);
+		}
+		nNum = parseInt(strTmp);
+   }
+   return nNum;
+}
+
+function GetTopicNumber(strHashString)
+{
+	var nTopicEndPos = strHashString.indexOf(',')
+	if (nTopicEndPos == -1) { // no window option.
+		return GetTopicNumberOnly(strHashString);
+	}
+	else {
+		var strWindowOption = strHashString.substring(nTopicEndPos + 1, strHashString.length);
+		var strWithNavPane = 'withnavpane=true';
+		if (strWindowOption.toLowerCase().indexOf(strWithNavPane) == 0)
+		{
+			if (strWindowOption.length > strWithNavPane.length)
+				gstrWindowOption = strWindowOption.substring(strWithNavPane.length + 1);
+			else
+				gstrWindowOption = "";
+			gbWithNavPane = true;
+		}
+		else
+			gstrWindowOption = strWindowOption;
+		return GetTopicNumberOnly(strHashString.substring(0, nTopicEndPos));		
+	}
+}
+
+function GetTopicNumberOnly(strTopicString)
+{
+	var nEqualPos = strTopicString.indexOf('=');
+	if (nEqualPos == -1) {
+		return GetTopicNumberAuto(strTopicString);
+	}
+	else {
+		var strValue=strTopicString.substring(nEqualPos + 1, strTopicString.length);
+		if (strTopicString.toLowerCase().indexOf("topicnumber") == 0) {
+			return parseInt(strValue);
+		} else if (strTopicString.toLowerCase().indexOf("topicid") == 0) {
+			return GetTopicNumberById(strValue);
+		} else if (strTopicString.toLowerCase().indexOf("remoteurl") == 0) {
+			if(IsInternal(strValue))
+				gstrURL = strValue;
+			return -1;
+		}
+
+	}
+}
+
+//Find HomePage of the WebHelp system
+// we try to get the topic from remote project if it exists.
+function RedirectToHomePage()
+{
+	if (parent && parent != this && parent.goNext)
+	{
+		var sHome = parent.goNext();
+		if (sHome != "")
+			RedirectTo(sHome);
+	}
+}
+
+function getHomePage()
+{
+	if (parent && parent != this && parent.getRelHomePage)
+	{
+		return parent.getRelHomePage(document.location.href);
+	}
+	return "";
+}
+
+function addRemoteProject(strPath)
+{
+	if (parent && parent != this && parent.addProject)
+	{
+		parent.addProject(strPath);
+	}
+}
+
+//Redirect page to...
+function RedirectTo(strUrl)
+{
+   if (gstrWindowOption.length != 0) {
+		var wnd = window.open(strUrl, "HelpStub", gstrWindowOption);
+		// close current window and rename the stub window to current window.
+		wnd.focus();
+		if (parent)
+			parent.close();
+   }
+   else {
+	parent.document.location.href = strUrl;
+	window.focus();
+  }
+}
+
+//Prompt the user that we can not find...
+function FailToFind(strMsg)
+{
+    RedirectToHomePage();
+}
+
+//Find topic by topic number (defined in h file)
+function FindTopicByTopicNum(nTopicNum)
+{
+	var i = 0;
+	var iEnd = gArrayCsh.length;
+	for (i=0; i<iEnd; i++)
+	{
+		if (gArrayCsh[i].nTopicNum == nTopicNum)
+		{
+			var strURL = gArrayCsh[i].strUrl;
+			if (gbWithNavPane)
+			{
+				var strHomePage = getHomePage();
+				if (strHomePage.length != 0)
+					strURL = strHomePage + strURL;
+			}	
+			RedirectTo(strURL);
+			return true;
+		}
+	}
+	FailToFind("Fail to find topic assocaite with topic number: " + nTopicNum);
+	return false;
+}
+
+//Find topic by topic id (alias id defined in ali file)
+function GetTopicNumberById(strTopicId)
+{
+   var i = 0;
+   var iEnd = gArrayCsh.length;
+   for (i=0; i<iEnd; i++)
+   {
+	if (gArrayCsh[i].strAliasId == strTopicId)
+	{
+	    return gArrayCsh[i].nTopicNum;
+	 }
+   }
+   gstrURL = "";
+   return -1;
+}
+
+//Set Context-sensitive help entity...
+function SetCsh(n, strAliasId, nTopicNum, strUrl)
+{
+   gArrayCsh[n] = new CshEntityItem(strAliasId,nTopicNum,strUrl);
+}
+
+
+function getHash()
+{
+	if (parent && parent != this)
+		return parent.location.hash;
+	else
+		return "";
+}
+//-->
+</script>
+<script language="javascript">
+<!--
+  SetCsh(0,"Data_Viewer_area",16,"user_interface/data_viewer.htm#area");
+  SetCsh(1,"Lens",35,"tools/lens.htm");
+  SetCsh(2,"Nonlinear_Filtering",93,"tools/nonLinearFilterOp.htm");
+  SetCsh(3,"Image_Channels",30,"tools/channel.htm");
+  SetCsh(4,"Support_and_Contacting_the_Author",64,"contact/contact.htm");
+  SetCsh(5,"Project_Window_top",62,"user_interface/project_window.htm#top");
+  SetCsh(6,"Image_Rectification",76,"user_interface/rectification.htm");
+  SetCsh(7,"Windows_Menu",74,"user_interface/main_windows_menu.htm");
+  SetCsh(8,"Multiview_pref",78,"tools/multiview.htm#pref");
+  SetCsh(9,"Project_Window_menu",61,"user_interface/project_window.htm#menu");
+  SetCsh(10,"Note_pref",40,"tools/note.htm#pref");
+  SetCsh(11,"Project_Preferences",56,"user_interface/project_props.htm");
+  SetCsh(12,"Arithmetic",84,"tools/arithmeticOp.htm");
+  SetCsh(13,"Data_Viewer_class",17,"user_interface/data_viewer.htm#class");
+  SetCsh(14,"Getting_Help_onlineHelp",27,"getting_started/getting_help.htm#onlineHelp");
+  SetCsh(15,"Note",39,"tools/note.htm");
+  SetCsh(16,"Background",6,"tools/background.htm");
+  SetCsh(17,"Context",14,"user_interface/context_dialog.htm");
+  SetCsh(18,"Class_Editor",11,"user_interface/class_editor.htm");
+  SetCsh(19,"Profile_pref",72,"tools/profile.htm#pref");
+  SetCsh(20,"Coloring_Objects",13,"user_interface/color_objects.htm");
+  SetCsh(21,"Project_Window",59,"user_interface/project_window.htm");
+  SetCsh(22,"Options_Menu_loc",48,"user_interface/main_options_menu.htm#loc");
+  SetCsh(23,"Sending_Bug_Reports",63,"contact/bugs.htm");
+  SetCsh(24,"Measurement2D_pref",4,"tools/measure2d.htm#pref");
+  SetCsh(25,"Measurement1D_pref",2,"tools/measure1d.htm#pref");
+  SetCsh(26,"Measurement1D",1,"tools/measure1d.htm");
+  SetCsh(27,"Measurement2D",3,"tools/measure2d.htm");
+  SetCsh(28,"Background_Descriptors",7,"tools/background_descriptors.htm");
+  SetCsh(29,"Binary",83,"tools/BinaryOp.htm");
+  SetCsh(30,"Segmentation",96,"tools/segmentationOp.htm");
+  SetCsh(31,"Display",18,"tools/display.htm");
+  SetCsh(32,"Logic",90,"tools/logicOp.htm");
+  SetCsh(33,"Object_Extraction_pref",43,"tools/object_extraction.htm#pref");
+  SetCsh(34,"Channel",85,"tools/channelOp.htm");
+  SetCsh(35,"Texture",70,"user_interface/texture_dialog.htm");
+  SetCsh(36,"Calibration",9,"tools/calibration.htm");
+  SetCsh(37,"General_Description",25,"tools/general_description.htm");
+  SetCsh(38,"Project_Preferences_defaultProject",57,"user_interface/project_props.htm#defaultProject");
+  SetCsh(39,"Feret_Diameters",21,"user_interface/feret_dialog.htm");
+  SetCsh(40,"Watershed",97,"tools/watershed.htm");
+  SetCsh(41,"Pseudo_Color",91,"tools/lutOp.htm");
+  SetCsh(42,"K_means_clustering",89,"tools/kmeans.htm");
+  SetCsh(43,"Project_Menu",54,"user_interface/project_menu.htm");
+  SetCsh(44,"Supported_File_Types",65,"getting_started/file_format.htm");
+  SetCsh(45,"Point_Counting_pref",52,"tools/point_counting.htm#pref");
+  SetCsh(46,"Keyboard_shortcuts",33,"getting_started/keys.htm");
+  SetCsh(47,"Lens_pref",36,"tools/lens.htm#pref");
+  SetCsh(48,"Getting_Help",26,"getting_started/getting_help.htm");
+  SetCsh(49,"Profile",71,"tools/profile.htm");
+  SetCsh(50,"Image_Factory",31,"tools/image_factory.htm");
+  SetCsh(51,"Histogram_Thresholding",29,"user_interface/threshold.htm");
+  SetCsh(52,"Supported_File_Types_data",66,"getting_started/file_format.htm#data");
+  SetCsh(53,"Data_Viewer",15,"user_interface/data_viewer.htm");
+  SetCsh(54,"Supported_File_Types_savingImage",68,"getting_started/file_format.htm#savingImage");
+  SetCsh(55,"Area_Editor",5,"user_interface/area.htm");
+  SetCsh(56,"Object_Extraction_separation",80,"tools/object_extraction.htm#separation");
+  SetCsh(57,"Calibration_pref",10,"tools/calibration.htm#pref");
+  SetCsh(58,"Classic_Filtering",86,"tools/classicFilterOp.htm");
+  SetCsh(59,"File_Menu",22,"user_interface/project_file_menu.htm");
+  SetCsh(60,"Project_Window_bottom",60,"user_interface/project_window.htm#bottom");
+  SetCsh(61,"Gradient_Filtering",88,"tools/gradientFilterOp.htm");
+  SetCsh(62,"Options_Menu_LookandFeel",49,"user_interface/main_options_menu.htm#LookandFeel");
+  SetCsh(63,"End_user_License_Agreement",20,"introduction/licence.htm");
+  SetCsh(64,"Background_pref",8,"tools/background.htm#pref");
+  SetCsh(65,"Object_Extraction_convert2D",79,"tools/object_extraction.htm#convert2D");
+  SetCsh(66,"Object_Extraction",42,"tools/object_extraction.htm");
+  SetCsh(67,"File_Menu_convertToTile",24,"user_interface/main_file_menu.htm#convertToTile");
+  SetCsh(68,"Welcome_to_JMicroVision",73,"introduction/welcome.htm");
+  SetCsh(69,"File_Menu1",23,"user_interface/main_file_menu.htm");
+  SetCsh(70,"Main_window_mainmenu",38,"user_interface/main_window.htm#mainmenu");
+  SetCsh(71,"Multiview",77,"tools/multiview.htm");
+  SetCsh(72,"Object_Extraction_threshold",81,"tools/object_extraction.htm#threshold");
+  SetCsh(73,"Display_pref",19,"tools/display.htm#pref");
+  SetCsh(74,"Point_Counting",51,"tools/point_counting.htm");
+  SetCsh(75,"Help_Menu",28,"user_interface/main_help_menu.htm");
+  SetCsh(76,"Magic_Wand",75,"tools/wand.htm");
+  SetCsh(77,"Image_List_Editor",32,"user_interface/image_list.htm");
+  SetCsh(78,"Classification",12,"user_interface/supervised_classif.htm");
+  SetCsh(79,"Enhancement",87,"tools/enhancementOp.htm");
+  SetCsh(80,"Labeling",34,"user_interface/labeling.htm");
+  SetCsh(81,"Rasterize_Drawings",95,"tools/rasterizeOp.htm");
+  SetCsh(82,"Options_Menu",47,"user_interface/main_options_menu.htm");
+  SetCsh(83,"Main_window",37,"user_interface/main_window.htm");
+  SetCsh(84,"Object_Extraction_wand",82,"tools/object_extraction.htm#wand");
+  SetCsh(85,"Project_Toolbar",58,"user_interface/project_toolbar.htm");
+  SetCsh(86,"Morphology",92,"tools/MorphologyOp.htm");
+  SetCsh(87,"Object_Descriptors",41,"tools/object_descriptors.htm");
+  SetCsh(88,"Object_Extraction_objects",98,"tools/object_extraction.htm#objects");
+  SetCsh(89,"Supported_File_Types_jvm",67,"getting_started/file_format.htm#jvm");
+  SetCsh(90,"Plugins",94,"tools/pluginsOp.htm");
+
+
+//-->
+</script>
+<script language="javascript">
+<!--
+//Find CSH according to hash string after this page
+if (getHash().length > 0)
+{
+   // VH 05/16/00 now support 
+   // TopicID=
+   // TopicNumber=
+   // RemoteURL=   
+   // and WindowsOptions
+   // with the format #a=xxx,b=xxx,c=xxx...
+   var strHashString = getHash().toString();
+   // change ? to : for remote URL. because java applet have some problem to pass a URL with two : inside the URL so we changed it. 
+   // so here need to change it back.
+   strHashString = strHashString.substring(1,strHashString.length);
+   strHashString = strHashString.replace("%072%057%057", "://");
+   var nTopicNum = GetTopicNumber(strHashString);
+
+   if (nTopicNum != -1)
+   {
+      FindTopicByTopicNum(nTopicNum);
+   }
+   else
+   {
+      if (gstrURL.length > 0) 
+	RedirectTo(gstrURL);
+      else
+      	RedirectToHomePage();
+   }
+}
+else
+{
+   RedirectToHomePage();
+}
+//-->
+</script>
+<noscript>
+ <p> Your browser does not support JavaScript. WebHelp Context-Sensitive Help requires JavaScript support to run.</p>
+</noscript>
+</body>
+</html>
+
+
+
+
+
+
