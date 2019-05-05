@@ -1,16 +1,24 @@
 <!DOCTYPE HTML>
-
 <html>
 <!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
-
 <head>
-  <!-- InstanceBeginEditable name="doctitle" -->
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 2017" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Point Counting</title>
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<link href="../contenu.css" rel="stylesheet" type="text/css" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-112072548-2" type="text/javascript" language="JavaScript1.2"></script>
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  <title>Point Counting</title><!-- InstanceEndEditable -->
-  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
- <!-- InstanceBeginEditable name="head" -->
- <!-- InstanceEndEditable -->
-  <link href="../contenu.css" rel="stylesheet" type="text/css">
+  gtag('config', 'UA-112072548-2');
+//]]></script>
 <script type="text/javascript" language="JavaScript">
 //<![CDATA[
 function reDo() {
@@ -41,7 +49,6 @@ visibility:hidden; }
 <script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8"></script>
 <script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8"></script>
 
- <meta name="generator" content="Adobe RoboHelp 2017" />
 </head>
 
 <body><script type="text/javascript" language="javascript1.2">//<![CDATA[
@@ -103,71 +110,137 @@ function onSetStartPage()
 }
 //-->
 //]]></script>
-<script type="text/javascript" src="../ehlpdhtm.js"></script>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
 
-  <table width="99%" border="0" cellpadding="5" cellspacing="0">
-    <tr>
-      <td align="left" valign="middle" bgcolor="#E4A54E">
-        <h1><!-- InstanceBeginEditable name="titre" -->
-         Point Counting<!-- InstanceEndEditable --></h1>
-      </td>
-
-      <td align="right" valign="middle" bgcolor="#E4A54E"><img src="../images/logForWeb.gif" width="71" height="27" alt=""></td>
-    </tr>
-  </table><!-- InstanceBeginEditable name="texte" -->
-  <p>Point counting is a technique to measure the amount of each component present in an image. It consists in  laying a grid over the image and counting what is under each grid intersection point. </p>
-  <p>Point counting is an alternative method to quantify image components stochastically<span class="note">, especially when the contrast between the components is poor or when the image is too complex for using the <strong><a href="point_counting.htm">Object Extraction</a></strong> or <strong><a href="background.htm">Background</a></strong> tool.</span></p>
-  <h3>Grid types</h3>
-   <ul style="list-style-image:url(../images/blueListBull.gif) ">
-    <li><strong>No grid (manual)</strong>: This mode allows counting objects in an image manually. Each time you click on an object, it is tagged using a colored point of the selected class in the <strong>Manual</strong> combo box (at the top of the <strong>Class</strong> panel).
-      <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note:</strong> To delete a point or modify its class, select <strong>None</strong> in the <strong>Manual</strong> combo box, select the desired point and use the delete command from the contextual menu (right-click).</p>
-    </li>
-    <li><strong>Random grid</strong>: The intersection points are in a uniform random grid, which means that the points are selected randomly. This is the default grid. </li>
-    <li><strong>Recursive grid</strong>: The intersection points are located in a rectangular grid, which is  subdivided recursively.</li>
-  </ul>
-  <h3>Starting a counting </h3>
-  <ol>
-    <li>Make your own list of classes with the <a href="../user_interface/class_editor.htm"><strong>Class Editor</strong></a>. </li>
-    <li>Press the <strong>Start</strong> button.</li>
-    <li>In the <strong>Point Counting Properties</strong> window: </li>
-    <ul style="list-style-image:url(../images/blueListBull.gif) ">
-      <li> <strong>Grid type</strong>: Select a grid (see Grid types above). </li>
-      <li><strong>Counting limitation</strong>: If necessary, select a limitation of the counting to a background or to a specified object class (see <span class="note"> <strong><a href="background.htm">Background</a></strong> or <strong><a href="point_counting.htm">Object Extraction</a></strong></span>).<br>
-      For showing an alert message after a certain number of points, check the box and enter a number.      </li>
-      <li><strong>Area</strong>: Select the area of the counting (see <a href="../user_interface/area.htm"><strong>Area Editor</strong></a>).</li>
-      <li>Finally, click <strong>OK</strong> to start the counting. </li>
-    </ul>
-    <li>For displaying several images simultaneously with a particular zoom factor for each image, create different views (see <a href="multiview.htm"><strong>Multiview</strong></a>). </li>
-    <li>Press the button of the  class (or the related keystroke)  that matches what is in the center of the pointer. Repeat this operation until the counting is statistically representative (see <strong>Stopping the counting</strong> below). </li>
-    <li>Display the results with the <a href="../user_interface/data_viewer.htm"><strong>Data Viewer</strong></a>.</li>
-  </ol>
-  <table width="99%"  border="0" cellpadding="5">
-    <tr>
-      <td align="left" valign="top"><p><img src="../images/pointCount.gif" width="211" height="367"></p></td>
-      <td align="left" valign="top"><p><strong>Reset</strong>: Reset the current session.</p>
-        <p><strong>Floating Bar</strong>: Open the <strong>Class</strong> panel in an independent window. Closing the window will replace the panel in the initial state. </p>
-        <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note:</strong> Having the list next to the pointer is more comfortable, because you can focus your eyes on the center of the screen during the counting.</p>
-        <p><strong>Center Pointer</strong>: Replace the pointer in the center of the screen.</p>
-        <p>The two first <strong>Arrow Buttons</strong> allow going from a point to another chronologically. The third one <img src="../images/arrow_new.png" width="16" height="16"> allows getting a new position (it  can also be used for bypassing a position). </p>
-        <p><strong>Refresh</strong>: Refresh the percentages (e.g. when points have been deleted).</p>
-        <p>&nbsp;</p></td>
-    </tr>
-  </table>
-  <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note:</strong> Classes can be added, removed or merged even while counting.</p>
-  <h3> Modifying  the class of a point</h3>
-  <p>Navigate with the <strong>Arrow Buttons</strong> and then click on the desired class button. It is also possible to change the class of a point by double-clicking on the point or by selecting<strong> Properties</strong> in the contextual menu. </p>
-  <h3>Stopping the counting </h3>
-  <p>There are two ways of stopping the counting:</p>
-  <ul style="list-style-image:url(../images/blueListBull.gif) ">
-    <li>The first one is simply by fixing a limit of points in the <strong>Point Counting </strong><strong>Properties</strong>. An alert message appears when reaching the limit. </li>
-    <li>The second one is by observing a stochastic criterion in the <strong>Evolution Plot </strong><img src="../images/evol_chart.png" width="16" height="16"> (see image below). When the percentages are getting stable in the plot, the counting can be stopped. </li>
-  </ul>
-  <p><img src="../images/pointEvolution.gif" width="442" height="216"></p>
-  <h2>Point Counting preferences<a name="pref"></a></h2>
-  <p><strong>Default grid type </strong>and<strong> default point limit </strong>can be changed  in the <strong>Point Counting </strong><strong>Properties</strong> when starting a new counting.</p>
-  <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note:</strong> To display the preferences, open the <strong><a href="../user_interface/project_props.htm">Project Preferences</a></strong> window <img src="../images/preferences.png" width="16" height="16"> and  select <strong>Point Counting</strong>.</p>
-  <h2>&nbsp;  </h2>
-  <!-- InstanceEndEditable --><!-- InstanceEnd -->
+<table cellspacing="0" width="99%">
+	<tr>
+		<td style="vertical-align: middle; text-align: left; padding-left: 5px; 
+			 padding-top: 5px; padding-right: 5px; padding-bottom: 5px;" 
+			 bgcolor="#E4A54E"><h1><!-- InstanceBeginEditable name="titre" -->
+         Point Counting<!-- InstanceEndEditable --></h1></td>
+		<td style="vertical-align: middle; text-align: right; padding-left: 5px; 
+			 padding-top: 5px; padding-right: 5px; padding-bottom: 5px;" 
+			 bgcolor="#E4A54E"><img src="../images/logForWeb.gif" alt="" 
+									 width="71" height="27" border="0" /></td>
+	</tr>
+</table>
+<!-- InstanceBeginEditable name="texte" -->
+  <p>Point counting is a technique to measure the amount of each component 
+ present in an image. It consists in laying a grid over the image and counting 
+ what is under each grid intersection point. </p>
+<p>Point counting is an alternative method to quantify image components 
+ stochastically<span class="note">, especially when the contrast between 
+ the components is poor or when the image is too complex for using the 
+ <strong><a href="point_counting.htm">Object Extraction</a></strong> or 
+ <strong><a href="background.htm">Background</a></strong> tool.</span></p>
+<h3>Grid types</h3>
+<ul style="list-style-image: url('../images/blueListBull.gif');">
+	<li><strong>No grid (manual)</strong>: This mode allows counting objects 
+	 in an image manually. Each time you click on an object, it is tagged 
+	 using a colored point of the selected class in the <strong>Manual</strong> 
+	 combo box (at the top of the <strong>Class</strong> panel). 
+	<p class="note"><img src="../images/pencil.gif" alt="" width="15" height="19" 
+						 border="0" />&#160;<strong>Note:</strong> To delete 
+	 a point or modify its class, select <strong>None</strong> in the <strong>Manual</strong> 
+	 combo box, select the desired point and use the delete command from 
+	 the contextual menu (right-click).</p></li>
+	<li><strong>Random grid</strong>: The intersection points are in a 
+	 uniform random grid, which means that the points are selected randomly. 
+	 This is the default grid. </li>
+	<li><strong>Recursive grid</strong>: The intersection points are located 
+	 in a rectangular grid, which is subdivided recursively.</li>
+</ul>
+<h3>Starting a counting </h3>
+<ol>
+	<li>Make your own list of classes with the <a href="../user_interface/class_editor.htm"><strong>Class 
+	 Editor</strong></a>. </li>
+	<li>Press the <strong>Start</strong> button.</li>
+	<li>In the <strong>Point Counting Properties</strong> window:
+	<ul style="list-style-image: url('../images/blueListBull.gif');">
+		<li><strong>Grid type</strong>: Select a grid (see Grid types above). 
+		 </li>
+		<li><strong>Counting limitation</strong>: If necessary, select 
+		 a limitation of the counting to a background or to a specified 
+		 object class (see <span class="note"><strong><a href="background.htm">Background</a></strong> 
+		 or <strong><a href="point_counting.htm">Object Extraction</a></strong></span>).<br />
+		For showing an alert message after a certain number of points, 
+		 check the box and enter a number. </li>
+		<li><strong>Area</strong>: Select the area of the counting (see 
+		 <a href="../user_interface/area.htm"><strong>Area Editor</strong></a>).</li>
+		<li>Finally, click <strong>OK</strong> to start the counting. </li>
+	</ul> </li>
+	<li>For displaying several images simultaneously with a particular 
+	 zoom factor for each image, create different views (see <a href="multiview.htm"><strong>Multiview</strong></a>). 
+	 </li>
+	<li>Press the button of the class (or the related keystroke) that matches 
+	 what is in the center of the pointer. Repeat this operation until 
+	 the counting is statistically representative (see <strong>Stopping 
+	 the counting</strong> below). </li>
+	<li>Display the results with the <a href="../user_interface/data_viewer.htm"><strong>Data 
+	 Viewer</strong></a>.</li>
+</ol>
+<table width="99%">
+	<tr>
+		<td style="vertical-align: top; text-align: left; padding-left: 5px; 
+			 padding-top: 5px; padding-right: 5px; padding-bottom: 5px;"><p><img 
+		 src="../images/pointCount.gif" alt="" width="211" height="367" 
+		 border="0" /></p></td>
+		<td style="vertical-align: top; text-align: left; padding-left: 5px; 
+			 padding-top: 5px; padding-right: 5px; padding-bottom: 5px;"><p><strong>Reset</strong>: 
+		 Reset the current session.</p>
+		<p><strong>Floating Bar</strong>: Open the <strong>Class</strong> 
+		 panel in an independent window. Closing the window will replace 
+		 the panel in the initial state. </p>
+		<p class="note"><img src="../images/pencil.gif" alt="" width="15" 
+							 height="19" border="0" />&#160;<strong>Note:</strong> 
+		 Having the list next to the pointer is more comfortable, because 
+		 you can focus your eyes on the center of the screen during the 
+		 counting.</p>
+		<p><strong>Center Pointer</strong>: Replace the pointer in the 
+		 center of the screen.</p>
+		<p>The two first <strong>Arrow Buttons</strong> allow going from 
+		 a point to another chronologically. The third one <img src="../images/arrow_new.png" 
+		 alt="" width="16" height="16" border="0" /> allows getting a new 
+		 position (it can also be used for bypassing a position). </p>
+		<p><strong>Refresh</strong>: Refresh the percentages (e.g. when 
+		 points have been deleted).</p>
+		<p>&#160;</p></td>
+	</tr>
+</table>
+<p class="note"><img src="../images/pencil.gif" alt="" width="15" height="19" 
+					 border="0" />&#160;<strong>Note:</strong> Classes 
+ can be added, removed or merged even while counting.</p>
+<h3>Modifying the class of a point</h3>
+<p>Navigate with the <strong>Arrow Buttons</strong> and then click on the 
+ desired class button. It is also possible to change the class of a point 
+ by double-clicking on the point or by selecting<strong> Properties</strong> 
+ in the contextual menu. </p>
+<h3>Stopping the counting </h3>
+<p>There are two ways of stopping the counting:</p>
+<ul style="list-style-image: url('../images/blueListBull.gif');">
+	<li>The first one is simply by fixing a limit of points in the <strong>Point 
+	 Counting </strong><strong>Properties</strong>. An alert message appears 
+	 when reaching the limit. </li>
+	<li>The second one is by observing a stochastic criterion in the <strong>Evolution 
+	 Plot </strong><img src="../images/evol_chart.png" alt="" width="16" 
+						 height="16" border="0" /> (see image below). When 
+	 the percentages are getting stable in the plot, the counting can be 
+	 stopped. </li>
+</ul>
+<p><img src="../images/pointEvolution.gif" alt="" width="442" height="216" 
+		 border="0" /></p>
+<h2>Point Counting preferences<a name="pref"></a></h2>
+<p><strong>Default grid type </strong>and<strong> default point limit </strong>can 
+ be changed in the <strong>Point Counting </strong><strong>Properties</strong> 
+ when starting a new counting.</p>
+<p class="note"><img src="../images/pencil.gif" alt="" width="15" height="19" 
+					 border="0" />&#160;<strong>Note:</strong> To display 
+ the preferences, open the <strong><a href="../user_interface/project_props.htm">Project 
+ Preferences</a></strong> window <img src="../images/preferences.png" alt="" 
+										 width="16" height="16" border="0" /> 
+ and select <strong>Point Counting</strong>.</p>
+<h2>&#160; </h2>
+<!-- InstanceEndEditable --><!-- InstanceEnd -->
 <script type="text/javascript" language="javascript1.2">//<![CDATA[
 <!--
 if (window.writeIntopicBar)

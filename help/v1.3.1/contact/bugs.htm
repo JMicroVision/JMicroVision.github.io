@@ -10,7 +10,16 @@
 <!-- InstanceBeginEditable name="head" -->
 <!-- InstanceEndEditable -->
 <link href="../contenu.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" language="JavaScript">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112072548-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112072548-2');
+</script><script type="text/javascript" language="JavaScript">
 //<![CDATA[
 function reDo() {
   if (innerWidth != origWidth || innerHeight != origHeight)
@@ -137,8 +146,8 @@ function onSetStartPage()
 	<li>Your operating system type and version.</li>
 	<li>Quick summary of your hardware (CPU type, speed, memory installed, 
 	 video device type, other details that may be relevant to the problem).</li>
-	<li>How does the problem exhibit: send the error messages of the errorLog.txt 
-	 file located in the user directory of JMicroVision ( ${user.home}./jmicrovision) 
+	<li>How does the problem exhibit: send the error messages of the file 
+	 located in the user directory of JMicroVision ( ${user.home}./jmicrovision/jmvision-0.log.0) 
 	 or, if the file does not contain error messages, make a short description 
 	 of what has happened.</li>
 	<li>What were the actions preceding the problem, when did the problem 

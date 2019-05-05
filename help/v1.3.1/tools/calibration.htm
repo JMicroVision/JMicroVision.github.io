@@ -1,15 +1,26 @@
 <!DOCTYPE HTML>
-
 <html>
 <!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
-
 <head>
-  <!-- InstanceBeginEditable name="doctitle" -->
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 2017" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Calibration</title>
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<link href="../contenu.css" rel="stylesheet" type="text/css" />
 
-  <title>Calibration</title><!-- InstanceEndEditable -->
-  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
- <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
-  <link href="../contenu.css" rel="stylesheet" type="text/css">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112072548-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112072548-2');
+</script>
+
 <script type="text/javascript" language="JavaScript">
 //<![CDATA[
 function reDo() {
@@ -40,7 +51,6 @@ visibility:hidden; }
 <script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8"></script>
 <script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8"></script>
 
- <meta name="generator" content="Adobe RoboHelp 2017" />
 </head>
 
 <body><script type="text/javascript" language="javascript1.2">//<![CDATA[
@@ -102,68 +112,147 @@ function onSetStartPage()
 }
 //-->
 //]]></script>
-<script type="text/javascript" src="../ehlpdhtm.js"></script>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
 
-  <table width="99%" border="0" cellpadding="5" cellspacing="0">
-    <tr>
-      <td align="left" valign="middle" bgcolor="#E4A54E">
-        <h1><!-- InstanceBeginEditable name="titre" -->Spatial Calibration<!-- InstanceEndEditable --></h1>
-      </td>
-
-      <td align="right" valign="middle" bgcolor="#E4A54E"><img src="../images/logForWeb.gif" width="71" height="27" alt=""></td>
-    </tr>
-  </table><!-- InstanceBeginEditable name="texte" -->
-  <p>The spatial calibration tool  can convert automatically the pixel values to any other unit of measurement by multiplying the measured values by a conversion factor. Once the spatial calibration is defined, all the position and measurement values in JMicroVision are displayed according to the conversion factor<strong><a href="../user_interface/data_viewer.htm"></a></strong>.</p>
-  <p>When the check box called <strong>Scale</strong> is activated in the tree (see <a href="display.htm"><strong>Display</strong></a>), a scale is displayed at the left bottom on the image. The scale is automatically adjusted when the zoom factor of the main image is modified. </p>
-  <p>When there is no calibration, all the <a href="../user_interface/project_window.htm#bottom">Tools</a> use the pixel as  unit of measurement. Otherwise, the <strong>Output unit</strong> selected in the combo box (European or Anglo-Saxon unit) defines the unit of measurement.</p>
-  <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note:</strong> The spatial calibration becomes invalid if the image  has a vertical resolution different from the horizontal resolution, or if the image has been distorted or rescaled with a different horizontal/vertical ratio.</p>
-  <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note:</strong> Sometimes you may need to refresh the measurement values to apply the new spatial calibration or when the output unit is modified, by pressing the Refresh button (e.g. <a href="../user_interface/data_viewer.htm"><strong>Data Viewer</strong></a>) or by reselecting the drawing.</p>
-  <table width="99%"  border="0" cellpadding="5">
-    <tr>
-      <td align="left" valign="top"><p>In the calibration tool, there are four modes:</p>
-        <ul style="list-style-image:url(../images/blueListBull.gif) ">
-          <li>No calibration</li>
-          <li>Image acquisition device</li>
-          <li>Known distance</li>
-          <li>Custom calibration </li>
-        </ul>
-        <p>The <strong>Load</strong> and <strong>Export</strong> buttons allow loading and saving a spatial calibration, so that it can be reused in another project. </p>
-        <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note:</strong> The conversion factor   uses more decimals  than the ones displayed in the interface (in blue) to convert measurements into real values.</p>
-        <p class="note">&nbsp;</p></td>
-      <td align="left" valign="top"><p><img src="../images/calibration.gif" width="201" height="305"></p>      </td>
-    </tr>
-  </table>
-  <p>The <strong>Shift Image Origin </strong> button opens a dialog which allows to shift the origin of the image. The first panel &quot;Default Image Coordinates&quot; defines a position without any shift. The second panel  &quot;New Coordinates&quot; redefines the position entered in the first panel. </p>
-  <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note:</strong> The origin can be located by default at the top or at the bottom left corner of the image (depends the Y axis direction, see <a href="#pref">Spatial Calibration preferences</a>).</p>
-  <p>To shift the origin,  choose a position which has a known reference from the combo box or enter  X and Y values in the first panel (the position can be located in the image by pressing the <strong>Show Position</strong> button). Then, in the second panel, enter  X and Y values either in pixels or with a specific unit. When the <strong>OK</strong> button is pressed, the origin of the default image coordinates is shifted. The origin shift is the X and Y distance of the positions entered in the first and the second panel. </p>
-  <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note:</strong> If the new coordinates are defined with a specific unit (not pixels), the final X and Y values will be round in pixels (discrete values). </p>
-  <h3>No calibration</h3>
-  <p>This is the  default mode. The conversion factor is set to 1, so the program shows the measurements in pixels without any conversion. </p>
-  <h3>Image acquisition device</h3>
-  <p>This mode can be used for images acquired by a device like a scanner, by entering the acquisition resolution in dpi.</p>
-  <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note:</strong> Some image acquisition devices write the calibration value in the header of the image file. When the image is opened in JMicroVision, the calibration is set automatically (works only with TIFF format).</p>
-  <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note:</strong> The calibration is biased when the image has been rescaled or if there is an optical system between the device and the specimen (e.g. that magnifies the specimen). </p>
-  <h3>Known distance </h3>
-  <p>Some measurement devices may include a scale in the image, thus providing a reference point for calibrating. Images with an object that has a known distance can also be used.</p>
-  <p>This mode allows setting a conversion value by drawing a line  of known distance  on an image. Follow these steps:</p>
-  <ul style="list-style-image:url(../images/blueListBull.gif) ">
-    <li>Enter a known distance</li>
-    <li>Set the unit of the  known distance</li>
-    <li>Draw a line with the line in the toolbar <img src="../images/segment.png" width="16" height="16">&nbsp;(afterwards the line can be moved or rescaled)</li>
-  </ul>
-  <h3>Custom calibration</h3>
-  <p>This mode allows entering a length that corresponds to the length of one pixel.</p>
-  <p>&nbsp;</p>
-  <h2>Spatial Calibration preferences<a name="pref"></a></h2>
-  <p><strong>Max length of the scale</strong>: defines the maximal length (in pixels) of the scale displayed on the main image. 
-
-
-The scale length changes when the zoom factor value or the output unit is changed.</p>
-  <p>Checking the box <strong>Keep all the position values in pixels</strong> will allow to <SPAN id=BABID_Results><SPAN>maintain</SPAN></SPAN> the position parameters in pixels (see <a href="object_descriptors.htm">position object descriptors</a>).</p>
-  <p><strong>Vertical axis (Y) direction</strong>: defines the direction of the Y axis. The default direction is down. In this case, the origin is located at the top left corner of the image <span class="note"><img src="../images/position.gif" width="30" height="30"></span>. When the direction is up, the origin is at the bottom left corner. </p>
-  <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note:</strong> To display the preferences, open the <strong><a href="../user_interface/project_props.htm">Project Preferences</a></strong> window <img src="../images/preferences.png" width="16" height="16">, select <strong>Calibration</strong>.</p>
-  <p class="note">&nbsp;</p>
-  <!-- InstanceEndEditable --><!-- InstanceEnd -->
+<table cellspacing="0" width="99%">
+	<tr>
+		<td style="vertical-align: middle; text-align: left; padding-left: 5px; 
+			 padding-top: 5px; padding-right: 5px; padding-bottom: 5px;" 
+			 bgcolor="#E4A54E"><h1><!-- InstanceBeginEditable name="titre" -->Spatial 
+		 Calibration<!-- InstanceEndEditable --></h1></td>
+		<td style="vertical-align: middle; text-align: right; padding-left: 5px; 
+			 padding-top: 5px; padding-right: 5px; padding-bottom: 5px;" 
+			 bgcolor="#E4A54E"><img src="../images/logForWeb.gif" alt="" 
+									 width="71" height="27" border="0" /></td>
+	</tr>
+</table>
+<!-- InstanceBeginEditable name="texte" -->
+  <p>The spatial calibration tool can convert automatically the pixel values 
+ to any other unit of measurement by multiplying the measured values by 
+ a conversion factor. Once the spatial calibration is defined, all the 
+ position and measurement values in JMicroVision are displayed according 
+ to the conversion factor.</p>
+<p>When the check box called <strong>Scale</strong> is activated in the 
+ tree (see <a href="display.htm"><strong>Display</strong></a>), a scale 
+ is displayed at the left bottom on the image. The scale is automatically 
+ adjusted when the zoom factor of the main image is modified. </p>
+<p>When there is no calibration, all the <a href="../user_interface/project_window.htm#bottom">Tools</a> 
+ use the pixel as unit of measurement. Otherwise, the <strong>Output unit</strong> 
+ selected in the combo box (European or Anglo-Saxon unit) defines the unit 
+ of measurement.</p>
+<p class="note"><img src="../images/pencil.gif" alt="" width="15" height="19" 
+					 border="0" />&#160;<strong>Note:</strong> The spatial 
+ calibration becomes invalid if the image has a vertical resolution different 
+ from the horizontal resolution, or if the image has been distorted or 
+ rescaled with a different horizontal/vertical ratio.</p>
+<p class="note"><img src="../images/pencil.gif" alt="" width="15" height="19" 
+					 border="0" />&#160;<strong>Note:</strong> Sometimes 
+ you may need to refresh the measurement values to apply the new spatial 
+ calibration or when the output unit is modified, by pressing the Refresh 
+ button (e.g. <a href="../user_interface/data_viewer.htm"><strong>Data 
+ Viewer</strong></a>) or by reselecting the drawing.</p>
+<table width="99%">
+	<tr>
+		<td style="vertical-align: top; text-align: left; padding-left: 5px; 
+			 padding-top: 5px; padding-right: 5px; padding-bottom: 5px;"><p>In 
+		 the calibration tool, there are four modes:</p>
+		<ul style="list-style-image: url('../images/blueListBull.gif');">
+			<li>No calibration</li>
+			<li>Image acquisition device</li>
+			<li>Known distance</li>
+			<li>Custom calibration </li>
+		</ul>
+		<p>The <strong>Load</strong> and <strong>Export</strong> buttons 
+		 allow loading and saving a spatial calibration, so that it can 
+		 be reused in another project. </p>
+		<p class="note"><img src="../images/pencil.gif" alt="" width="15" 
+							 height="19" border="0" />&#160;<strong>Note:</strong> 
+		 The conversion factor uses more decimals than the ones displayed 
+		 in the interface (in blue) to convert measurements into real values.</p>
+		<p class="note">&#160;</p></td>
+		<td style="vertical-align: top; text-align: left; padding-left: 5px; 
+			 padding-top: 5px; padding-right: 5px; padding-bottom: 5px;"><p><img 
+		 src="../images/calibration.gif" alt="" width="201" height="305" 
+		 border="0" /></p></td>
+	</tr>
+</table>
+<p>The <strong>Shift Image Origin </strong>button opens a dialog which 
+ allows to shift the origin of the image. The first panel &quot;Default 
+ Image Coordinates&quot; defines a position without any shift. The second 
+ panel &quot;New Coordinates&quot; redefines the position entered in the 
+ first panel. </p>
+<p class="note"><img src="../images/pencil.gif" alt="" width="15" height="19" 
+					 border="0" />&#160;<strong>Note:</strong> The origin 
+ can be located by default at the top or at the bottom left corner of the 
+ image (depends the Y axis direction, see <a href="#pref">Spatial Calibration 
+ preferences</a>).</p>
+<p>To shift the origin, choose a position which has a known reference from 
+ the combo box or enter X and Y values in the first panel (the position 
+ can be located in the image by pressing the <strong>Show Position</strong> 
+ button). Then, in the second panel, enter X and Y values either in pixels 
+ or with a specific unit. When the <strong>OK</strong> button is pressed, 
+ the origin of the default image coordinates is shifted. The origin shift 
+ is the X and Y distance of the positions entered in the first and the 
+ second panel. </p>
+<p class="note"><img src="../images/pencil.gif" alt="" width="15" height="19" 
+					 border="0" />&#160;<strong>Note:</strong> If the new 
+ coordinates are defined with a specific unit (not pixels), the final X 
+ and Y values will be round in pixels (discrete values). </p>
+<h3>No calibration</h3>
+<p>This is the default mode. The conversion factor is set to 1, so the 
+ program shows the measurements in pixels without any conversion. </p>
+<h3>Image acquisition device</h3>
+<p>This mode can be used for images acquired by a device like a scanner, 
+ by entering the acquisition resolution in dpi.</p>
+<p class="note"><img src="../images/pencil.gif" alt="" width="15" height="19" 
+					 border="0" />&#160;<strong>Note:</strong> Some image 
+ acquisition devices write the calibration value in the header of the image 
+ file. When the image is opened in JMicroVision, the calibration is set 
+ automatically (works only with TIFF format).</p>
+<p class="note"><img src="../images/pencil.gif" alt="" width="15" height="19" 
+					 border="0" />&#160;<strong>Note:</strong> The calibration 
+ is biased when the image has been rescaled or if there is an optical system 
+ between the device and the specimen (e.g. that magnifies the specimen). 
+ </p>
+<h3>Known distance </h3>
+<p>Some measurement devices may include a scale in the image, thus providing 
+ a reference point for calibrating. Images with an object that has a known 
+ distance can also be used.</p>
+<p>This mode allows setting a conversion value by drawing a line of known 
+ distance on an image. Follow these steps:</p>
+<ul style="list-style-image: url('../images/blueListBull.gif');">
+	<li>Enter a known distance</li>
+	<li>Set the unit of the known distance</li>
+	<li>Draw a line with the line in the toolbar <img src="../images/segment.png" 
+														 alt="" width="16" 
+														 height="16" border="0" />&#160;(afterwards 
+	 the line can be moved or rescaled)</li>
+</ul>
+<h3>Custom calibration</h3>
+<p>This mode allows entering a length that corresponds to the length of 
+ one pixel.</p>
+<p>&#160;</p>
+<h2>Spatial Calibration preferences<a name="pref"></a></h2>
+<p><strong>Max length of the scale</strong>: defines the maximal length 
+ (in pixels) of the scale displayed on the main image. The scale length 
+ changes when the zoom factor value or the output unit is changed.</p>
+<p>Checking the box <strong>Keep all the position values in pixels</strong> 
+ will allow to <span id="BABID_Results"><span>maintain</span></span> the 
+ position parameters in pixels (see <a href="object_descriptors.htm">position 
+ object descriptors</a>).</p>
+<p><strong>Vertical axis (Y) direction</strong>: defines the direction 
+ of the Y axis. The default direction is down. In this case, the origin 
+ is located at the top left corner of the image <span class="note"><img 
+	 src="../images/position.gif" alt="" width="30" height="30" border="0" /></span>. 
+ When the direction is up, the origin is at the bottom left corner. </p>
+<p class="note"><img src="../images/pencil.gif" alt="" width="15" height="19" 
+					 border="0" />&#160;<strong>Note:</strong> To display 
+ the preferences, open the <strong><a href="../user_interface/project_props.htm">Project 
+ Preferences</a></strong> window <img src="../images/preferences.png" alt="" 
+										 width="16" height="16" border="0" />, 
+ select <strong>Calibration</strong>.</p>
+<p class="note">&#160;</p>
+<!-- InstanceEndEditable --><!-- InstanceEnd -->
 <script type="text/javascript" language="javascript1.2">//<![CDATA[
 <!--
 if (window.writeIntopicBar)

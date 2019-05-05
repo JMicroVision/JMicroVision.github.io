@@ -1,16 +1,25 @@
 <!DOCTYPE HTML>
-
 <html>
 <!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
-
 <head>
-  <!-- InstanceBeginEditable name="doctitle" -->
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 2017" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Data Viewer</title>
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<link href="../contenu.css" rel="stylesheet" type="text/css" />
 
-  <title>Data Viewer</title><!-- InstanceEndEditable -->
-  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
- <!-- InstanceBeginEditable name="head" -->
- <!-- InstanceEndEditable -->
-  <link href="../contenu.css" rel="stylesheet" type="text/css">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112072548-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112072548-2');
+</script>
 <script type="text/javascript" language="JavaScript">
 //<![CDATA[
 function reDo() {
@@ -41,7 +50,6 @@ visibility:hidden; }
 <script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8"></script>
 <script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8"></script>
 
- <meta name="generator" content="Adobe RoboHelp 2017" />
 </head>
 
 <body><script type="text/javascript" language="javascript1.2">//<![CDATA[
@@ -103,41 +111,83 @@ function onSetStartPage()
 }
 //-->
 //]]></script>
-<script type="text/javascript" src="../ehlpdhtm.js"></script>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
 
-  <table width="99%" border="0" cellpadding="5" cellspacing="0">
-    <tr>
-      <td align="left" valign="middle" bgcolor="#E4A54E">
-        <h1><!-- InstanceBeginEditable name="titre" -->
-         Data Viewer<!-- InstanceEndEditable --></h1>
-      </td>
-
-      <td align="right" valign="middle" bgcolor="#E4A54E"><img src="../images/logForWeb.gif" width="71" height="27" alt=""></td>
-    </tr>
-  </table><!-- InstanceBeginEditable name="texte" -->
-
-  <p>The <strong>Data Viewer </strong> <img src="../images/dataViewer.png" width="16" height="16"> can display the data produced by the <a href="project_window.htm#bottom"><strong>Tools</strong></a> and  export them.</p>
-  <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note:</strong> Only vector drawings which are visible on the image (see <a href="../tools/image_factory.htm"><strong>Display</strong></a>) are loaded in the Data Viewer. In addition, only the parameters that have been checked in the <a href="project_props.htm">preferences</a> are visible. </p>
-  <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note:</strong> For sorting a column, click on the column header. A triangle indicates whether data are sorted ascending or descending. There are three states: unsorted and sorted ascending or descending. Use Ctrl + left click for sorting more than one column. </p>
-  <p><strong>Data</strong>: Select a tool from the list. </p>
-  <p><strong>Select graphic</strong>: When this box is checked and a cell of the table is selected, the corresponding drawing is selected and displayed in the center of the main window. </p>
-  <p><strong>Mode</strong>: Graphics or Classes (see below). </p>
-  <p><strong>Refresh</strong>: Reload the data (e.g. when drawings have been deleted or hidden).</p>
-  <p><strong>Export Data</strong>: <a href="../getting_started/file_format.htm#data">Export data</a> in a semicolon separator file (.csv), in an ASCII tabulation separator file (.txt) or in an XML version 1.0 file (.xml).</p>
-  <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note:</strong> When exporting data, the complete decimal fraction of values is written.</p>
-  <h3>Graphics Mode</h3>
-  <p> Shows the visible parameters of vector drawings of <a href="../tools/note.htm#pref"><strong>Note</strong></a>, <a href="../tools/measure1d.htm#pref"><strong>1D Measurement</strong></a>, <a href="../tools/measure2d.htm#pref"><strong>2D Measurement</strong></a>, <a href="../tools/object_extraction.htm#pref"><strong>Object Extraction</strong></a>, <a href="../tools/point_counting.htm#pref"><strong>Point Counting</strong></a> and <strong><a href="../tools/image_factory.htm">Image Factory</a></strong><a href="../tools/image_factory.htm"> (markers)</a>.</p>
-  <p><img src="../images/dataViewer.gif" width="598" height="378" border="0" alt="">   
-  <p><strong>Chart</strong>: Shows the histogram of parameters. 
-  <p><strong>Scatter Plot</strong>: Allows comparing values of two parameters.
-  <p><strong>Labeling</strong>: Allows applying a label on drawings (see <strong><a href="labeling.htm">Labeling</a></strong>).
-  <h3>Classes Mode<a name="class"></a></h3>
-  <p>Shows the surface percentages and the number of occurrences of the  <a href="../tools/object_extraction.htm"><strong>Object Extraction</strong></a>, <a href="../tools/point_counting.htm"><strong>Point Counting</strong></a> or <a href="../tools/background.htm"><strong>Background </strong></a>classes.</p>
-  <p><img src="../images/dataViewer2.gif" width="598" height="378" border="0" alt="">   
-  <p><strong>Chart</strong>: Shows the pie chart of classes.  
-  <p><strong>Compute result from Area</strong><a name="area"></a>: Allows computing the amount of classes in a specific area of the image (see <a href="area.htm"><strong>Area Editor</strong></a>).   
-  <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note:</strong> Only the whole image area is automatically computed. The other areas must be computed every time   data are reloaded.  
-  <p>  <!-- InstanceEndEditable --><!-- InstanceEnd -->
+<table cellspacing="0" width="99%">
+	<tr>
+		<td style="vertical-align: middle; text-align: left; padding-left: 5px; 
+			 padding-top: 5px; padding-right: 5px; padding-bottom: 5px;" 
+			 bgcolor="#E4A54E"><h1><!-- InstanceBeginEditable name="titre" -->
+         Data Viewer<!-- InstanceEndEditable --></h1></td>
+		<td style="vertical-align: middle; text-align: right; padding-left: 5px; 
+			 padding-top: 5px; padding-right: 5px; padding-bottom: 5px;" 
+			 bgcolor="#E4A54E"><img src="../images/logForWeb.gif" alt="" 
+									 width="71" height="27" border="0" /></td>
+	</tr>
+</table>
+<!-- InstanceBeginEditable name="texte" -->
+  <p>The <strong>Data Viewer </strong><img src="../images/dataViewer.png" 
+											 alt="" width="16" height="16" 
+											 border="0" /> can display 
+ the data produced by the <a href="project_window.htm#bottom"><strong>Tools</strong></a> 
+ and export them.</p>
+<p class="note"><img src="../images/pencil.gif" alt="" width="15" height="19" 
+					 border="0" />&#160;<strong>Note:</strong> Only vector 
+ drawings which are visible on the image (see <a href="../tools/image_factory.htm"><strong>Display</strong></a>) 
+ are loaded in the Data Viewer. In addition, only the parameters that have 
+ been checked in the <a href="project_props.htm">preferences</a> are visible. 
+ </p>
+<p class="note"><img src="../images/pencil.gif" alt="" width="15" height="19" 
+					 border="0" />&#160;<strong>Note:</strong> For sorting 
+ a column, click on the column header. A triangle indicates whether data 
+ are sorted ascending or descending. There are three states: unsorted and 
+ sorted ascending or descending. Use Ctrl + left click for sorting more 
+ than one column. </p>
+<p><strong>Data</strong>: Select a tool from the list. </p>
+<p><strong>Select graphic</strong>: When this box is checked and a cell 
+ of the table is selected, the corresponding drawing is selected and displayed 
+ in the center of the main window. </p>
+<p><strong>Mode</strong>: Graphics or Classes (see below). </p>
+<p><strong>Refresh</strong>: Reload the data (e.g. when drawings have been 
+ deleted or hidden).</p>
+<p><strong>Export Data</strong>: <a href="../getting_started/file_format.htm#data">Export 
+ data</a> in a semicolon separator file (.csv), in an ASCII tabulation 
+ separator file (.txt) or in an XML version 1.0 file (.xml).</p>
+<p class="note"><img src="../images/pencil.gif" alt="" width="15" height="19" 
+					 border="0" />&#160;<strong>Note:</strong> When exporting 
+ data, the complete decimal fraction of values is written.</p>
+<h3>Graphics Mode</h3>
+<p>Shows the visible parameters of vector drawings of <a href="../tools/note.htm#pref"><strong>Note</strong></a>, 
+ <a href="../tools/measure1d.htm#pref"><strong>1D Measurement</strong></a>, 
+ <a href="../tools/measure2d.htm#pref"><strong>2D Measurement</strong></a>, 
+ <a href="../tools/object_extraction.htm#pref"><strong>Object Extraction</strong></a>, 
+ <a href="../tools/point_counting.htm#pref"><strong>Point Counting</strong></a> 
+ and <a href="../tools/image_factory.htm"><strong>Image Factory</strong> 
+ (markers)</a>.</p>
+<p><img src="../images/dataViewer.gif" alt="" width="598" height="378" 
+		 border="0" /> </p>
+<p><strong>Chart</strong>: Shows the histogram of parameters. </p>
+<p><strong>Scatter Plot</strong>: Allows comparing values of two parameters. 
+ </p>
+<p><strong>Labeling</strong>: Allows applying a label on drawings (see 
+ <strong><a href="labeling.htm">Labeling</a></strong>). </p>
+<h3>Classes Mode<a name="class"></a></h3>
+<p>Shows the surface percentages and the number of occurrences of the <a 
+	 href="../tools/object_extraction.htm"><strong>Object Extraction</strong></a>, 
+ <a href="../tools/point_counting.htm"><strong>Point Counting</strong></a> 
+ or <a href="../tools/background.htm"><strong>Background </strong></a>classes.</p>
+<p><img src="../images/dataViewer2.gif" alt="" width="598" height="378" 
+		 border="0" /> </p>
+<p><strong>Chart</strong>: Shows the pie chart of classes. </p>
+<p><strong>Compute result from Area</strong><a name="area"></a>: Allows 
+ computing the amount of classes in a specific area of the image (see <a 
+	 href="area.htm"><strong>Area Editor</strong></a>). </p>
+<p class="note"><img src="../images/pencil.gif" alt="" width="15" height="19" 
+					 border="0" />&#160;<strong>Note:</strong> Only the 
+ whole image area is automatically computed. The other areas must be computed 
+ every time data are reloaded. </p>
+<p><!-- InstanceEndEditable --><!-- InstanceEnd -->
+</p>
 <script type="text/javascript" language="javascript1.2">//<![CDATA[
 <!--
 if (window.writeIntopicBar)

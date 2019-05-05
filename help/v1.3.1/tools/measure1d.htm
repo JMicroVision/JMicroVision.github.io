@@ -1,15 +1,25 @@
 <!DOCTYPE HTML>
-
 <html>
 <!-- InstanceBegin template="/Templates/page.dwt" codeOutsideHTMLIsLocked="false" -->
-
 <head>
-  <!-- InstanceBeginEditable name="doctitle" -->
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Adobe RoboHelp 2017" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>1D Measurement</title>
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<link href="../contenu.css" rel="stylesheet" type="text/css" />
 
-  <title>1D Measurement</title><!-- InstanceEndEditable -->
-  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
- <!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
-  <link href="../contenu.css" rel="stylesheet" type="text/css">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112072548-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112072548-2');
+</script>
 <script type="text/javascript" language="JavaScript">
 //<![CDATA[
 function reDo() {
@@ -40,7 +50,6 @@ visibility:hidden; }
 <script type="text/javascript" language="javascript1.2" src="../whlang.js" charset="utf-8"></script>
 <script type="text/javascript" language="javascript1.2" src="../whtopic.js" charset="utf-8"></script>
 
- <meta name="generator" content="Adobe RoboHelp 2017" />
 </head>
 
 <body><script type="text/javascript" language="javascript1.2">//<![CDATA[
@@ -102,59 +111,119 @@ function onSetStartPage()
 }
 //-->
 //]]></script>
-<script type="text/javascript" src="../ehlpdhtm.js"></script>
+<script type="text/javascript" src="../ehlpdhtm.js" language="JavaScript1.2"></script>
 
-  <table width="99%" border="0" cellpadding="5" cellspacing="0">
-    <tr>
-      <td align="left" valign="middle" bgcolor="#E4A54E">
-        <h1><!-- InstanceBeginEditable name="titre" -->
-         1D Measurement <!-- InstanceEndEditable --></h1>
-      </td>
-
-      <td align="right" valign="middle" bgcolor="#E4A54E"><img src="../images/logForWeb.gif" width="71" height="27" alt=""></td>
-    </tr>
-  </table><!-- InstanceBeginEditable name="texte" -->
-  <p>This tool allows creating lines to measure an element in the image or to build a profile of the pixel intensities of the current image. If there is no <a href="calibration.htm"><strong>spatial calibration</strong></a>, the segment length value is displayed in pixels. </p>
-  <p><img src="../images/mesure1DToolBar.gif" width="209" height="28"></p>
-  <p>In the toolbar above, the first toggle button (the  one after the hand) allows selecting or moving drawings, the three next ones allows creating new lines: segment, polyline and freehand line. The two arrow buttons allow going from one segment to another. The last button will delete the selected drawings.</p>
-  <table width="99%"  border="0" cellpadding="5">
-    <tr>
-      <td align="right" valign="top"><p><img src="../images/measure1D.gif" width="200" height="274"></p>      </td>
-      <td align="left" valign="top">
-        <p>The <strong>Show Profile </strong> button opens the profile of the pixel intensities  of the current image. The <strong>min</strong> and <strong>max</strong> values (yellow horizontal lines on the plot) limit the range of the pixel intensities shown in the <strong>Statistics</strong> and  <strong>Data</strong> tables. In the <strong>Statistics</strong> table, the <strong>Threshold ratio</strong> gives the ratio between all the line pixels and the number of the pixels which have intensities in the limited range. The selected table can be saved in <a href="../getting_started/file_format.htm#data">CSV format</a>. </p>
-        <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note:</strong> When moving or resizing a line, or when the image is changed, the profile is automatically actualized. </p>
-        <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note:</strong> When moving along the profile plot, a pointer shows the corresponding position on the image and <a href="../user_interface/main_window.htm#info">pixel information</a> appears in the status bar.</p></td>
-    </tr>
-  </table>
-  <p>&nbsp;</p>
-  <h2>1D Measurement Descriptors </h2>
-  <h3>Position:</h3>
-  <ul style="list-style-image:url(../images/blueListBull.gif) ">
-    <li><strong>First</strong> <strong>point X</strong>: X coordinate position (image) of the first point of the line. </li>
-    <li><strong>First</strong> <strong>point Y</strong>: Y coordinate position (image) of the first point of the line.</li>
-    <li><strong>Last p</strong><strong>oint X</strong>: X coordinate position (image) of the last point of the line. </li>
-    <li><strong>Last p</strong><strong>oint Y</strong>: Y coordinate position (image) of the last point of the line.</li>
-    <li><strong>Barycenter x</strong>: X coordinate position (image) of the center of gravity of the line. </li>
-    <li><strong>Barycenter y</strong>: Y coordinate position (image) of the center of gravity of the line.</li>
-  </ul>
-  <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note: </strong>The image position (0,0) is located by default in the upper left corner <img src="../images/position.gif" width="30" height="30">. However, the origin and the direction of the y axis can be modified in the <strong><a href="calibration.htm">Spatial Calibration</a></strong> tool. </p>
-  <h3>Basic:</h3>
-  <ul style="list-style-image:url(../images/blueListBull.gif) ">
-    <li><strong>Line length</strong>: Length of the line. </li>
-    <li><strong>Orientation</strong>: Angle between the horizontal axis and the line (0-180 degrees, counterclockwise).<br>
-      <img src="../images/orientation.gif" width="69" height="37"></li>
-    <li><strong>Orientation significance</strong>: Define the significance (0 to 1) of the orientation according to the line shape. A straight line has the value 1. Conversely, a tortuous line will have a lower value. </li>
-    <li><strong>Azimuth</strong>: Horizontal angular distance from the northern point (at the top). The measurement is made clockwise through 360&deg; by placing  the center of the circle on the first point of the line. <br>
-      <img src="../images/azimut.gif" width="69" height="68"></li>
-    <li><strong>Azimuth significance</strong>: The ratio between the line length and the Euclidian distance between the first and the last point defines the significance (0 to 1) of the azimuth. A straight line has the value 1.</li>
-    <li><strong>Color (RGB)</strong>:  Color of the line, defined by the  red, green and blue components. </li>
-  </ul>
-  <p>&nbsp;</p>
-  <h2>1D Measurement preferences<a name="pref"></a></h2>
-  <p>Only the checked parameters will appear in the <strong>Selected Drawing</strong> panel and in the <a href="../user_interface/data_viewer.htm"><strong>Data Viewer</strong></a>.</p>
-  <p class="note"><img height="19" src="../images/pencil.gif" width="15" alt="">&#160;<strong>Note:</strong> To display the  preferences, open the <strong><a href="../user_interface/project_props.htm">Project Preferences</a></strong> window <img src="../images/preferences.png" width="16" height="16"> and  select <strong>1D measurement</strong>.</p>
-  <p>&nbsp;</p>
-  <!-- InstanceEndEditable --><!-- InstanceEnd -->
+<table cellspacing="0" width="99%">
+	<tr>
+		<td style="vertical-align: middle; text-align: left; padding-left: 5px; 
+			 padding-top: 5px; padding-right: 5px; padding-bottom: 5px;" 
+			 bgcolor="#E4A54E"><h1><!-- InstanceBeginEditable name="titre" -->
+         1D Measurement <!-- InstanceEndEditable --></h1></td>
+		<td style="vertical-align: middle; text-align: right; padding-left: 5px; 
+			 padding-top: 5px; padding-right: 5px; padding-bottom: 5px;" 
+			 bgcolor="#E4A54E"><img src="../images/logForWeb.gif" alt="" 
+									 width="71" height="27" border="0" /></td>
+	</tr>
+</table>
+<!-- InstanceBeginEditable name="texte" -->
+  <p>This tool allows creating lines to measure an element in the image 
+ or to build a profile of the pixel intensities of the current image. If 
+ there is no <a href="calibration.htm"><strong>spatial calibration</strong></a>, 
+ the segment length value is displayed in pixels. </p>
+<p><img src="../images/mesure1DToolBar.gif" alt="" width="209" height="28" 
+		 border="0" /></p>
+<p>In the toolbar above, the first toggle button (the one after the hand) 
+ allows selecting or moving drawings, the three next ones allows creating 
+ new lines: segment, polyline and freehand line. The two arrow buttons 
+ allow going from one segment to another. The last button will delete the 
+ selected drawings.</p>
+<table width="99%">
+	<tr>
+		<td style="vertical-align: top; text-align: right; padding-left: 5px; 
+			 padding-top: 5px; padding-right: 5px; padding-bottom: 5px;"><p><img 
+		 src="../images/measure1D.gif" alt="" width="200" height="274" 
+		 border="0" /></p></td>
+		<td style="vertical-align: top; text-align: left; padding-left: 5px; 
+			 padding-top: 5px; padding-right: 5px; padding-bottom: 5px;"><p>The 
+		 <strong>Show Profile </strong>button opens the profile of the 
+		 pixel intensities of the current image. The <strong>min</strong> 
+		 and <strong>max</strong> values (yellow horizontal lines on the 
+		 plot) limit the range of the pixel intensities shown in the <strong>Statistics</strong> 
+		 and <strong>Data</strong> tables. In the <strong>Statistics</strong> 
+		 table, the <strong>Threshold ratio</strong> gives the ratio between 
+		 all the line pixels and the number of the pixels which have intensities 
+		 in the limited range. The selected table can be saved in <a href="../getting_started/file_format.htm#data">CSV 
+		 format</a>. </p>
+		<p class="note"><img src="../images/pencil.gif" alt="" width="15" 
+							 height="19" border="0" />&#160;<strong>Note:</strong> 
+		 When moving or resizing a line, or when the image is changed, 
+		 the profile is automatically actualized. </p>
+		<p class="note"><img src="../images/pencil.gif" alt="" width="15" 
+							 height="19" border="0" />&#160;<strong>Note:</strong> 
+		 When moving along the profile plot, a pointer shows the corresponding 
+		 position on the image and <a href="../user_interface/main_window.htm#info">pixel 
+		 information</a> appears in the status bar.</p></td>
+	</tr>
+</table>
+<p>&#160;</p>
+<h2>1D Measurement Descriptors </h2>
+<h3>Position:</h3>
+<ul style="list-style-image: url('../images/blueListBull.gif');">
+	<li><strong>First</strong> <strong>point X</strong>: X coordinate position 
+	 (image) of the first point of the line. </li>
+	<li><strong>First</strong> <strong>point Y</strong>: Y coordinate position 
+	 (image) of the first point of the line.</li>
+	<li><strong>Last p</strong><strong>oint X</strong>: X coordinate position 
+	 (image) of the last point of the line. </li>
+	<li><strong>Last p</strong><strong>oint Y</strong>: Y coordinate position 
+	 (image) of the last point of the line.</li>
+	<li><strong>Barycenter x</strong>: X coordinate position (image) of 
+	 the center of gravity of the line. </li>
+	<li><strong>Barycenter y</strong>: Y coordinate position (image) of 
+	 the center of gravity of the line.</li>
+</ul>
+<p class="note"><img src="../images/pencil.gif" alt="" width="15" height="19" 
+					 border="0" />&#160;<strong>Note: </strong>The image 
+ position (0,0) is located by default in the upper left corner <img src="../images/position.gif" 
+	 alt="" width="30" height="30" border="0" />. However, the origin and 
+ the direction of the y axis can be modified in the <strong><a href="calibration.htm">Spatial 
+ Calibration</a></strong> tool. </p>
+<h3>Basic:</h3>
+<ul style="list-style-image: url('../images/blueListBull.gif');">
+	<li><strong>Line length</strong>: Length of the line. </li>
+	<li><strong>Orientation</strong>: Angle between the horizontal axis 
+	 and the line (0-180 degrees, counterclockwise).<br />
+	<img src="../images/orientation.gif" alt="" width="69" height="37" 
+		 border="0" /></li>
+	<li><strong>Orientation significance</strong>: Define the significance 
+	 (0 to 1) of the orientation according to the line shape. A straight 
+	 line has the value 1. Conversely, a tortuous line will have a lower 
+	 value. </li>
+	<li><strong>Azimuth</strong>: Horizontal angular distance from the 
+	 northern point (at the top). The measurement is made clockwise through 
+	 360° by placing the center of the circle on the first point of the 
+	 line. <br />
+	<img src="../images/azimut.gif" alt="" width="69" height="68" border="0" /></li>
+	<li><strong>Azimuth significance</strong>: The ratio between the line 
+	 length and the Euclidian distance between the first and the last point 
+	 defines the significance (0 to 1) of the azimuth. A straight line 
+	 has the value 1.</li>
+	<li><strong>Color (RGB)</strong>: Color of the line, defined by the 
+	 red, green and blue components. </li>
+</ul>
+<p>&#160;</p>
+<h2>1D Measurement preferences<a name="pref"></a></h2>
+<p>Only the checked parameters will appear in the <strong>Selected Drawing</strong> 
+ panel and in the <a href="../user_interface/data_viewer.htm"><strong>Data 
+ Viewer</strong></a>.</p>
+<p class="note"><img src="../images/pencil.gif" alt="" width="15" height="19" 
+					 border="0" />&#160;<strong>Note:</strong> To display 
+ the preferences, open the <strong><a href="../user_interface/project_props.htm">Project 
+ Preferences</a></strong> window <img src="../images/preferences.png" alt="" 
+										 width="16" height="16" border="0" /> 
+ and select <strong>1D measurement</strong>.</p>
+<p>&#160;</p>
+<!-- InstanceEndEditable --><!-- InstanceEnd -->
 <script type="text/javascript" language="javascript1.2">//<![CDATA[
 <!--
 if (window.writeIntopicBar)

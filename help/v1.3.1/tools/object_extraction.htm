@@ -10,6 +10,16 @@
 <!-- InstanceBeginEditable name="head" -->
 <!-- InstanceEndEditable -->
 <link href="../contenu.css" rel="stylesheet" type="text/css" />
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112072548-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112072548-2');
+</script>
 <script type="text/javascript" language="JavaScript">
 //<![CDATA[
 function reDo() {
@@ -153,7 +163,7 @@ function onSetStartPage()
 		 border="0" /></p></td>
 	</tr>
 </table>
-<h3>Color or gray intensity threshold<a name="threshold"></a></h3>
+<h3>Intensity threshold<a name="threshold"></a></h3>
 <p>The segmentation by threshold is the method commonly used to extract 
  objects. The user selects a range of values in a histogram. This range 
  must match as well as possible the pixel intensities of the objects to 
@@ -183,7 +193,7 @@ function onSetStartPage()
 					 border="0" />&#160;<strong>Note:</strong> <strong>Templates 
  </strong>can be used by the <strong>Object Extraction</strong> or the 
  <strong>Background</strong> tool, but they can only be created or modified 
- by the <strong>Color or gray intensity threshold</strong> dialog.</p>
+ by the I<strong>ntensity threshold</strong> dialog.</p>
 <h3>&#160;</h3>
 <h3>Convert 2 dimensions drawings<a name="convert2D"></a></h3>
 <p>This method allows converting <a href="measure2d.htm">2D drawings</a> 
@@ -195,9 +205,9 @@ function onSetStartPage()
 <p>See <strong><a href="wand.htm">Magic Wand</a></strong>.</p>
 <h3>&#160;</h3>
 <h3>Object Separation<a name="separation"></a></h3>
-<p>This experimental module is similar to <strong><a href="#threshold">Color 
- or gray intensity threshold</a></strong>, but has extra functions to separate 
- connected objects. </p>
+<p>This experimental module is similar to <strong><a href="#threshold">Intensity 
+ threshold</a></strong>, but has extra functions to separate connected 
+ objects. </p>
 <p class="note"><img src="../images/pencil.gif" alt="" width="15" height="19" 
 					 border="0" />&#160;<strong>Note:</strong> The separation 
  process requires to handle the whole image in memory, thus it can be applied 
@@ -259,8 +269,8 @@ function onSetStartPage()
  defined). For <strong>Custom Shape</strong>, the sliders initial values 
  are proportional to the shape and eccentricity variance of the set of 
  vector drawings. </p>
-<p>The other commands are identical to <strong><a href="#threshold">Color 
- or gray intensity threshold</a></strong>.</p>
+<p>The other commands are identical to <strong><a href="#threshold">Intensity 
+ threshold</a></strong>.</p>
 <p class="note"><img src="../images/pencil.gif" alt="" width="15" height="19" 
 					 border="0" />&#160;<strong>Note:</strong> <strong>Templates 
  </strong>can be saved and reapplied later (in <strong>Separation config</strong>).</p>
